@@ -1,0 +1,81 @@
+---
+name: COBRA
+version: 0.000001
+author:
+  - 'Jens Wille <jens.wille@gmail.com>'
+abstract: 'Classification Of Bibliographic Records, Automatic'
+license: gpl
+resources:
+  license: http://www.opensource.org/licenses/gpl-license.php
+requires:
+  AI::Categorizer: 0.07
+  Carp: 0
+  Class::Std: 0.000008
+  Config::General: 0
+  Cwd: 0
+  Fatal: 0
+  File::Copy: 0
+  File::Find: 0
+  File::Path: 0
+  File::Slurp: 0
+  File::Spec: 0
+  File::chdir: 0
+  FindBin: 0
+  Getopt::Euclid: 0.000005
+  IO::Prompt: 0
+  List::MoreUtils: 0
+  POSIX: 0
+  Readonly: 0
+  Smart::Comments: 0
+  Test::More: 0
+  perl: 5.8.1
+  version: 0
+provides:
+  AI::Categorizer::KnowledgeSet:
+    file: lib/AI/Categorizer/KnowledgeSet.pm
+  COBRA:
+    file: lib/COBRA.pm
+    version: 0.000001
+  COBRA::Collection:
+    file: lib/COBRA/Collection.pm
+    version: 0.000001
+  COBRA::Collection::Generic:
+    file: lib/COBRA/Collection/Generic.pm
+    version: 0.000001
+  COBRA::Collection::STN:
+    file: lib/COBRA/Collection/STN.pm
+    version: 0.000001
+  COBRA::Collection::STN::SOLIS:
+    file: lib/COBRA/Collection/STN/SOLIS.pm
+    version: 0.000001
+  COBRA::Collection::Simple:
+    file: lib/COBRA/Collection/Simple.pm
+    version: 0.000001
+  COBRA::Collection::Simple::SOLIS:
+    file: lib/COBRA/Collection/Simple/SOLIS.pm
+    version: 0.000001
+  COBRA::Export:
+    file: lib/COBRA/Export.pm
+    version: 0.000001
+  COBRA::Export::Gnuplot:
+    file: lib/COBRA/Export/Gnuplot.pm
+    version: 0.000001
+  COBRA::Export::Midos:
+    file: lib/COBRA/Export/Midos.pm
+    version: 0.000001
+  COBRA::Util:
+    file: lib/COBRA/Util.pm
+    version: 0.000001
+  COBRA::WrapIndexer:
+    file: lib/COBRA/WrapIndexer.pm
+    version: 0.000001
+  COBRA::WrapIndexer::Lingo:
+    file: lib/COBRA/WrapIndexer/Lingo.pm
+    version: 0.000001
+  Statistics::Contingency:
+    file: lib/Statistics/Contingency.pm
+    version: 0.06
+generated_by: Module::Build version 0.271
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

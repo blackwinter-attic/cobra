@@ -1,0 +1,885 @@
+#99991000099
+TI: Sozialwissenschaften
+DN: 99991000099
+CC: 10000
+
+#99991010099
+TI: Grundlagen, Geschichte, generelle Theorien und Methoden der Sozialwissenschaften
+DN: 99991010099
+CC: 10100
+
+#99991010199
+TI: Allgemeines zu den Sozialwissenschaften, Entwicklung und Geschichte der Sozialwissenschaften
+DN: 99991010199
+CC: 10101
+
+#99991010299
+TI: Wissenschaftstheorie, Wissenschaftsphilosophie, Wissenschaftslogik, Ethik der Sozialwissenschaften
+DN: 99991010299
+CC: 10102
+
+#99991010399
+TI: generelle Theorien der Sozialwissenschaften
+DN: 99991010399
+CC: 10103
+AB: Strukturalismus, Marxismus, Verhaltenstheorie, Systemdifferenzierung
+
+#99991010499
+TI: Forschungsarten der Sozialforschung
+DN: 99991010499
+CC: 10104
+AB: Forschungsstrategie, Projektplanung, Untersuchungsdesign (qualitative Untersuchungsansätze u.a.), Methodenvergleich
+
+#99991010599
+TI: Erhebungstechniken und Analysetechniken der Sozialwissenschaften
+DN: 99991010599
+CC: 10105
+AB: Erhebungsverfahren (Befragung, Intensivinterview u.a.), Meßverfahren (Skalierung, soziale Indikatoren u.a.), Auswahlverfahren (Quota, Random-Stichprobe u.a.), statistische, quantitative und qualitative Analyseverfahren, ökonometrische Verfahren, mathematische und andere Modelle, Simulation
+
+#99991019999
+TI: Sonstiges zu den Sozialwissenschaften
+DN: 99991019999
+CC: 10199
+
+#99991020099
+TI: Soziologie
+DN: 99991020099
+CC: 10200
+
+#99991020199
+TI: Allgemeine Soziologie, Makrosoziologie, spezielle Theorien und "Schulen", Entwicklung und Geschichte der Soziologie. formale Soziologie, mathematische Soziologie, Modellbildung in der Soziologie, Protosoziologie, vergleichende Soziologie
+DN: 99991020199
+CC: 10201
+AB: soziales Handeln, soziale Norm, sozialer Prozeß, soziale Struktur, soziale Differenzierung, soziale Schichtung, soziale Ungleichheit, sozialer Status, soziale Klassen, soziale Kasten, soziales System, soziale Ordnung, soziale Beziehungen, soziale Rolle, soziale Mobilität, sozialer Wandel, Macht und Herrschaft
+
+#99991020299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Soziologie
+DN: 99991020299
+CC: 10202
+
+#99991020399
+TI: Soziologie von Gesamtgesellschaften
+DN: 99991020399
+CC: 10203
+AB: Anwendung von Begriffen und Konzepten der Allgemeinen Soziologie auf konkrete gesellschaftliche Probleme. Sozialstruktur der BRD, soziale Kontrolle in traditionalen Gesellschaften am Beispiel von Südirland, Transformationsprozeß in Ostdeutschland
+
+#99991020499
+TI: Industrie- und Betriebssoziologie, Arbeitssoziologie. Unternehmersoziologie
+DN: 99991020499
+CC: 10204
+AB: Industriegesellschaft, industrielle Beziehungen, Arbeitspolitik, Arbeitsorganisation, Arbeitsteilung, Humanisierung, Mitbestimmung, Technik und Arbeit, sozio-technische Konfigurationen, Automatisierung, Rationalisierung, Arbeitszeit, Qualifikation
+
+#99991020599
+TI: Wirtschaftssoziologie. Marktsoziologie
+DN: 99991020599
+CC: 10205
+AB: Wirtschaft und Gesellschaft, gesellschaftliche Arbeitsteilung, Industrialisierung, ökonomische Herrschaft, Eigentum, Konsum
+
+#99991020699
+TI: Verkehrssoziologie
+DN: 99991020699
+CC: 10206
+
+#99991020799
+TI: Organisationssoziologie. Verwaltungssoziologie, Militärsoziologie
+DN: 99991020799
+CC: 10207
+AB: Bürokratie, Verbände, Vereine
+
+#99991020899
+TI: Bildungs- und Erziehungssoziologie. pädagogische Soziologie
+DN: 99991020899
+CC: 10208
+AB: Bildung und Erziehung als gesellschaftliche Vorgänge und deren Auswirkungen auf andere soziale Bereiche. staatliches Bildungssystem, Bildungschancen, Familienerziehung
+
+#99991020999
+TI: Familiensoziologie. Sexualsoziologie
+DN: 99991020999
+CC: 10209
+AB: Partnerschaft, Elternschaft, Eltern-Kind-Beziehungen, unvollständige Familie
+
+#99991021099
+TI: Jugendsoziologie. Jugendkultur, Kindheit
+DN: 99991021099
+CC: 10210
+
+#99991021199
+TI: Entwicklungsländersoziologie, Entwicklungssoziologie
+DN: 99991021199
+CC: 10211
+AB: Entwicklungsplanung, Entwicklungstheorie
+
+#99991021299
+TI: Agrarsoziologie. ländliche Soziologie, Soziologie des ländlichen Raumes
+DN: 99991021299
+CC: 10212
+
+#99991021399
+TI: Siedlungssoziologie. Gemeindesoziologie, Stadtsoziologie, Soziologie des Wohnens
+DN: 99991021399
+CC: 10213
+
+#99991021499
+TI: Kriminalsoziologie, Rechtssoziologie, Kriminologie
+DN: 99991021499
+CC: 10214
+AB: soziale Dimension von Deliktarten, Rechtsanwendungen, Strafverfahren, Strafvollzug, Resozialisation, Prävention, Rechtsbewußtsein
+
+#99991021599
+TI: Medizinsoziologie
+DN: 99991021599
+CC: 10215
+AB: Organisationsformen medizinischer Einrichtungen, Wert- und Normgefüge medizinischen Handelns, Entstehung chronischer Krankheiten
+
+#99991021699
+TI: Kultursoziologie, Kunstsoziologie. Literatursoziologie, Musiksoziologie
+DN: 99991021699
+CC: 10216
+AB: Kultur und Gesellschaft, Arbeiterkultur, kulturelle Identität, Kulturindustrie, bildende Kunst
+
+#99991021799
+TI: Kommunikationssoziologie, Sprachsoziologie, Soziolinguistik
+DN: 99991021799
+CC: 10217
+
+#99991021899
+TI: Religionssoziologie. Kirchensoziologie, Pastoralsoziologie
+DN: 99991021899
+CC: 10218
+
+#99991021999
+TI: Wissenssoziologie
+DN: 99991021999
+CC: 10219
+AB: kognitive Elemente des Bewußtseins, Denksoziologie, Ideologiekritik, Alltagswissen
+
+#99991022099
+TI: Wissenschaftssoziologie, Wissenschafts- und Technikforschung. Risikosoziologie, Techniksoziologie
+DN: 99991022099
+CC: 10220
+
+#99991029999
+TI: Sonstiges zur Soziologie
+DN: 99991029999
+CC: 10299
+AB: Katastrophensoziologie
+
+#99991030099
+TI: Demographie, Bevölkerungswissenschaft. Wirtschafts- und Sozialgeographie
+DN: 99991030099
+CC: 10300
+
+#99991030199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Demographie
+DN: 99991030199
+CC: 10301
+
+#99991030299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Demographie
+DN: 99991030299
+CC: 10302
+
+#99991030399
+TI: Bevölkerung. Bevölkerungspolitik, Bevölkerungssoziologie
+DN: 99991030399
+CC: 10303
+AB: Bevölkerungsstruktur, Bevölkerungswachstum, Altersaufbau, Sterblichkeit
+
+#99991030499
+TI: Migration. Migrationssoziologie
+DN: 99991030499
+CC: 10304
+AB: Wanderung, Flucht, ethnische Minderheiten
+
+#99991030599
+TI: Wirtschafts- und Sozialgeographie. Bevölkerungsgeographie, Landeskunde
+DN: 99991030599
+CC: 10305
+AB: Verteilung der Bevölkerung auf Stadtgebiete, Städtewachstum
+
+#99991039999
+TI: Sonstiges zur Demographie
+DN: 99991039999
+CC: 10399
+
+#99991040099
+TI: Ethnologie. Ethnographie, Ethnosoziologie, Völkerkunde, Volkskunde, Kulturanthropologie, empirische Kulturwissenschaften
+DN: 99991040099
+CC: 10400
+
+#99991050099
+TI: Politikwissenschaft
+DN: 99991050099
+CC: 10500
+
+#99991050199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Politikwissenschaft
+DN: 99991050199
+CC: 10501
+AB: Staatstheorie (Demokratie, Diktatur u.a.), politische Philosophie, politische Gesellschaftstheorie, Ideologie (Liberalismus, Konservatismus, Kommunismus, Sozialismus u.a.)
+
+#99991050299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Politikwissenschaft
+DN: 99991050299
+CC: 10502
+
+#99991050399
+TI: Staat, staatliche Organisationsformen
+DN: 99991050399
+CC: 10503
+AB: Regierungssysteme (Einparteiensystem, Militärdiktatur, konstitutionelle Monarchie, parlamentarische Demokratie u.a.), Staatsstruktur (Föderalismus, Zentralismus, Regionalismus u.a.), Verfassung (Verfassungsgeschichte, Verfassungseinrichtungen u.a.), Gewaltenteilung (Legislative, Exekutive, Judikative), Staatsgebiet (Gebietshoheit, territoriale Probleme, Separatismus u.a.)
+
+#99991050499
+TI: politische Willensbildung, politische Soziologie
+DN: 99991050499
+CC: 10504
+AB: politische Macht, Herrschaft, politische Unruhen, Terrorismus, Organisationen der politischen Willensbildung (Parteien, Verbände, Lobby, Initiativen, politische und soziale Bewegungen u.a.), politische Entscheidungen, Wahlen (Wahlverhalten, Wahlergebnisse u.a.), politischer Planungs- und Entscheidungsprozess, Partizipation (Planungsbeteiligung, Volksbegehren u.a.), politische Einstellungen, politische Kultur, politisches Bewußtsein, politische Sozialisation, Meinungsbildung, politische Bildung
+
+#99991050599
+TI: internationale Beziehungen. Außenpolitik, Deutschlandpolitik, Entwicklungspolitik
+DN: 99991050599
+CC: 10505
+AB: internationale Organisationen (ASEAN, OECD, UNO, Arabische Liga, Blockfreie Staaten, Sozialistische Internationale u.a.) und ihre Organe (einchließlich der Einrichtung von Gerichtshöfen), internationale Beziehungen zwischen einzelnen Staaten oder Staatengruppen, Entwicklungshilfe, Nord-Süd-Konflikt, Auflösung der Blöcke, Wiedervereinigung, Zerfall der sozialistischen Staaten
+
+#99991050699
+TI: Europapolitik
+DN: 99991050699
+CC: 10506
+AB: europäische Integration, europäische Organisationen (EU, EG, EWG, EFTA, CEFTA, WEU, EURATOM, EGKS, EWR, Europäische Währungsunion u.a.) und ihre Organe (Europäisches Parlament, Europarat, Europäische Kommission, Europäischer Gerichtshof u.a.)
+
+#99991050799
+TI: Friedens- und Konfliktforschung
+DN: 99991050799
+CC: 10507
+AB: Krieg und Frieden, Friedenssicherung, Sicherheitspolitik, Verteidigungspolitik, Militärbündnisse, Abrüstungspolitik (einschl. Verträgen und Abkommen), Konversion, internationale Organisationen (KSZE bzw. OSZE, NATO)
+
+#99991050899
+TI: spezielle Ressortpolitik
+DN: 99991050899
+CC: 10508
+AB: nur, sofern nicht anderen Klassen zugeordnet. Agrarpolitik, Energiepolitik, Forschungspolitik, Innenpolitik, Kommunalpolitik, Kulturpolitik, Technologiepolitik, Umweltpolitik, Wissenschaftspolitik
+
+#99991059999
+TI: Sonstiges zur Politikwissenschaft
+DN: 99991059999
+CC: 10599
+
+#99991060099
+TI: Erziehungswissenschaft
+DN: 99991060099
+CC: 10600
+AB: Erziehung, Pädagogik, Bildung, Ausbildung, Forschung, Sonderpädagogik
+
+#99991060199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Erziehungswissenschaft
+DN: 99991060199
+CC: 10601
+
+#99991060299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Erziehungswissenschaft
+DN: 99991060299
+CC: 10602
+
+#99991060399
+TI: Makroebene des Bildungswesens
+DN: 99991060399
+CC: 10603
+AB: Bildungsplanung, Bildungspolitik, Bildungsreform, Bildungsverwaltung (Binnenorganisation, Selbstverwaltung u.a.), Bildungssystem (Gesamtheit aller Bildungseinrichtungen, Schule allgemein u.a.), Ausbildungssystem (duales System u.a.)
+
+#99991060499
+TI: Forschung
+DN: 99991060499
+CC: 10604
+AB: Forschungsorganisation, Forschungsplanung, Forschungsökonomie
+
+#99991060599
+TI: Bildungswesen Elementarbereich
+DN: 99991060599
+CC: 10605
+AB: Kindergarten, Vorschule
+
+#99991060699
+TI: Bildungswesen Primarbereich
+DN: 99991060699
+CC: 10606
+AB: Klassen 1-4, Eingangsstufe, Grundschule
+
+#99991060799
+TI: Bildungswesen Sekundarstufe I
+DN: 99991060799
+CC: 10607
+AB: Klassen 5-10, Unterstufe, Mittelstufe, Gymnasium, Realschule, Hauptschule
+
+#99991060899
+TI: Bildungswesen Sekundarstufe II
+DN: 99991060899
+CC: 10608
+AB: Klassen 11-13, Oberstufe, Gymnasium, Fachoberschule, Berufsschule
+
+#99991060999
+TI: Bildungswesen besonderer Schulformen
+DN: 99991060999
+CC: 10609
+AB: Gesamtschule, Ganztagsschule, Internat, Montessorischule, Waldorfschule, Sonderschule
+
+#99991061099
+TI: Bildungswesen tertiärer Bereich
+DN: 99991061099
+CC: 10610
+AB: Fachhochschule, Hochschule. Studium, Lehrerausbildung
+
+#99991061199
+TI: Bildungswesen quartärer Bereich, Berufsbildung
+DN: 99991061199
+CC: 10611
+AB: Zweiter Bildungsweg, betriebliche oder überbetriebliche Ausbildung, berufliche Weiterbildung, Erwachsenenbildung
+
+#99991061299
+TI: Berechtigungswesen
+DN: 99991061299
+CC: 10612
+AB: Numerus Clausus, Prüfungen, Zensuren
+
+#99991061399
+TI: Beratungswesen
+DN: 99991061399
+CC: 10613
+AB: Bildungsberatung, Studienberatung
+
+#99991061499
+TI: Unterricht, Didaktik
+DN: 99991061499
+CC: 10614
+AB: Lehrplan, Curriculum, Fachdidaktik, Unterrichtsorganisation, Unterrichtsmethodik, Unterrichtstechnologie, Unterrichtsformen, Unterrichtsstil, Lehrmittel, Lernmittel, Unterrichtsmaterial
+
+#99991061599
+TI: Lehrende, Erziehende, Lernende
+DN: 99991061599
+CC: 10615
+AB: nur, sofern nicht anderen Klassen zugeordnet. Dozent, Lehrer, Ausbilder, Erzieher, Student, (Vor-)Schüler, Auszubildender
+
+#99991061699
+TI: Sonderbereiche der Pädagogik
+DN: 99991061699
+CC: 10616
+AB: außerschulische Bildung, ästhetische Erziehung, religiöse Erziehung, sittlich-moralische Erziehung, Sexualerziehung, Friedenserziehung, Verkehrserziehung
+
+#99991061799
+TI: Sonderpädagogik
+DN: 99991061799
+CC: 10617
+AB: Heilpädagogik, Erziehung bei Körperbehinderung, Mehrfachbehinderung, Einrichtungen der Sonderpädagogik
+
+#99991069999
+TI: Sonstiges zur Erziehungswissenschaft
+DN: 99991069999
+CC: 10699
+AB: Krankenpädagogik
+
+#99991070099
+TI: Psychologie
+DN: 99991070099
+CC: 10700
+
+#99991070199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Psychologie
+DN: 99991070199
+CC: 10701
+
+#99991070299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Psychologie
+DN: 99991070299
+CC: 10702
+
+#99991070399
+TI: Allgemeine Psychologie
+DN: 99991070399
+CC: 10703
+AB: Psychologie kognitiver Prozesse (Denken, Begriffsbildung, Sprache, Problemlösungsverhalten, Entscheidung u.a.), Lernpsychologie (Gedächtnis u.a.), Motivationspsychologie, Bewußtseinszustände, Wahrnehmungspsychologie, Psychomotorik
+
+#99991070499
+TI: Persönlichkeitspsychologie
+DN: 99991070499
+CC: 10704
+AB: Intelligenz, Kreativität, Persönlichkeit
+
+#99991070599
+TI: Entwicklungspsychologie
+DN: 99991070599
+CC: 10705
+AB: Säuglingspsychologie, Kinderpsychologie, Jugendpsychologie, Psychologie des Erwachsenenalters, Gerontopsychologie, kognitive Entwicklung und Wahrnehmungsentwicklung, psychosoziale Entwicklung und Persönlichkeitsentwicklung
+
+#99991070699
+TI: Sozialpsychologie. Psychologie der Gesellschaft, Mikrosoziologie
+DN: 99991070699
+CC: 10706
+AB: Interaktionsforschung, Gruppenverhalten, Gruppendynamik, Massenpsychologie, Führerschaft, interpersonelle Prozesse, Kommunikationspsychologie, Einstellung, Vorurteil, Stereotyp, soziale Wahrnehmung, soziale Kognition, Verhalten, Sozialisation
+
+#99991070799
+TI: psychologische Diagnostik und Beratung
+DN: 99991070799
+CC: 10707
+AB: Persönlichkeitsdiagnostik, Eignungsdiagnostik, Testentwicklung, psychologische Tests in verschiedenen Feldern (Intelligenztest u.a.), Beratungspsychologie
+
+#99991070899
+TI: psychische Störungen, Behandlung und Prävention. Psychophysiologie, Psychosomatik
+DN: 99991070899
+CC: 10708
+AB: klinische Psychologie, Psychiatrie, medizinische Psychologie, Psychotherapie, Psychoanalyse (als Therapie)
+
+#99991070999
+TI: angewandte Psychologie
+DN: 99991070999
+CC: 10709
+AB: Arbeitspsychologie, Architekturpsychologie, Berufspsychologie, Betriebspsychologie, forensische Psychologie, Kunstpsychologie, Marktpsychologie, Medienpsychologie, Militärpsychologie, Organisationspsychologie, pädagogische Psychologie, politische Psychologie, Psychologie der Sexualität, Rechtspsychologie, Sportpsychologie, Umweltpsychologie, Verkehrspsychologie, Werbepsychologie, Wirtschaftspsychologie
+
+#99991079999
+TI: Sonstiges zur Psychologie
+DN: 99991079999
+CC: 10799
+AB: Tierpsychologie
+
+#99991080099
+TI: Kommunikationswissenschaften. Publizistik, Informationswissenschaft, Bibliothekswissenschaft
+DN: 99991080099
+CC: 10800
+
+#99991080199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Kommunikationswissenschaften
+DN: 99991080199
+CC: 10801
+AB: Symbolismus, Zeichentheorie, Kommunikationsgeschichte
+
+#99991080299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Kommunikationswissenschaften
+DN: 99991080299
+CC: 10802
+
+#99991080399
+TI: interpersonelle Kommunikation
+DN: 99991080399
+CC: 10803
+AB: dialogische Kommunikation, Kommunikation in Gruppen und Organisationen, Gesprächsanalyse, Kommunikationsstrukturen, einseitige interpersonale Kommunikation (Reden, Vorträge, Predigten u.a.)
+
+#99991080400
+TI: Massenkommunikation
+DN: 99991080400
+CC: 1080400
+AB: medienübergreifende Darstellungen
+
+#99991080401
+TI: Rundfunk, Telekommunikation
+DN: 99991080401
+CC: 1080401
+AB: Hörfunk, Fernsehen
+
+#99991080402
+TI: Druckmedien
+DN: 99991080402
+CC: 1080402
+AB: Presse, Bücher
+
+#99991080403
+TI: andere Medien
+DN: 99991080403
+CC: 1080403
+AB: Film, Musik, Theater
+
+#99991080404
+TI: interaktive, elektronische Medien
+DN: 99991080404
+CC: 1080404
+AB: Multimedia, Internet, Computerspiel
+
+#99991080405
+TI: Medieninhalte, Aussagenforschung
+DN: 99991080405
+CC: 1080405
+
+#99991080406
+TI: Kommunikatorforschung, Journalismus
+DN: 99991080406
+CC: 1080406
+
+#99991080407
+TI: Wirkungsforschung, Rezipientenforschung
+DN: 99991080407
+CC: 1080407
+
+#99991080408
+TI: Meinungsforschung
+DN: 99991080408
+CC: 1080408
+
+#99991080409
+TI: Werbung, Public Relations, Öffentlichkeitsarbeit
+DN: 99991080409
+CC: 1080409
+
+#99991080410
+TI: Medienpädagogik
+DN: 99991080410
+CC: 1080410
+
+#99991080411
+TI: Medienpolitik, Informationspolitik, Medienrecht
+DN: 99991080411
+CC: 1080411
+
+#99991080412
+TI: Medienökonomie, Medientechnik
+DN: 99991080412
+CC: 1080412
+
+#99991080500
+TI: Informationswissenschaft
+DN: 99991080500
+CC: 1080500
+
+#99991080501
+TI: Information und Dokumentation, Bibliotheken, Archive
+DN: 99991080501
+CC: 1080501
+
+#99991080502
+TI: Informationsmanagement, informationelle Prozesse, Informationsökonomie
+DN: 99991080502
+CC: 1080502
+
+#99991080503
+TI: Szientometrie, Bibliometrie, Informetrie
+DN: 99991080503
+CC: 1080503
+
+#99991089999
+TI: Sonstiges zu Kommunikationswissenschaften
+DN: 99991089999
+CC: 10899
+
+#99991090099
+TI: Wirtschaftswissenschaften
+DN: 99991090099
+CC: 10900
+
+#99991090199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Wirtschaftswissenschaften
+DN: 99991090199
+CC: 10901
+
+#99991090299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Wirtschaftswissenschaften
+DN: 99991090299
+CC: 10902
+
+#99991090300
+TI: Volkswirtschaftslehre
+DN: 99991090300
+CC: 1090300
+AB: Nationalökonomie, Politische Ökonomie
+
+#99991090301
+TI: Volkswirtschaft
+DN: 99991090301
+CC: 1090301
+AB: Wirtschaftssystem, Wirtschaftsordnung, Markt, Industrieökonomik, Wettbewerb, Angebot, Nachfrage, Konjunktur, Wachstum, Wirtschaftsgüter, Kosten, Geld und Finanzmärkte, Zahlungsverkehr, Außenwirtschaft, internationale Wirtschaftsbeziehungen, Weltwirtschaft, Entwicklungsökonomik, Umweltökonomik
+
+#99991090302
+TI: Wirtschaftspolitik
+DN: 99991090302
+CC: 1090302
+AB: Ordnungspolitik, Verteilungspolitik, Finanzpolitik (Finanzreform, Finanzausgleich u.a.), Geldpolitik, Kreditpolitik, Konjunkturpolitik, Wachstumspolitik
+
+#99991090303
+TI: Öffentliche Finanzen und Finanzwissenschaft
+DN: 99991090303
+CC: 1090303
+AB: öffentliche Finanzen, öffentlicher Haushalt, Staatsquote, Steuern, Subventionen
+
+#99991090304
+TI: Wirtschaftssektoren
+DN: 99991090304
+CC: 1090304
+AB: Landwirtschaft, Forstwirtschaft, Fischerei, Energiewirtschaft, Wasserwirtschaft, Rohstoffwirtschaft, Industrie, Bauwirtschaft, Handwerk, Dienstleistungen, Handel, Verkehr, Freizeitwirtschaft, Fremdenverkehrswirtschaft, Post und Telekommunikation, Finanz- und Kreditwesen, Versicherungswesen, Öffentlicher Sektor, Private Haushalte
+
+#99991090400
+TI: Betriebswirtschaftslehre
+DN: 99991090400
+CC: 1090400
+
+#99991090401
+TI: Management
+DN: 99991090401
+CC: 1090401
+AB: Unternehmensführung, Führungskräfte, Unternehmensplanung, Innovation
+
+#99991090402
+TI: Personalwesen
+DN: 99991090402
+CC: 1090402
+AB: Personalpolitik, betriebliche Beschäftigungspolitik, Vergütungssysteme
+
+#99991090403
+TI: Materialwirtschaft und Logistik
+DN: 99991090403
+CC: 1090403
+AB: Beschaffung, Lagerhaltung, Transportwesen
+
+#99991090404
+TI: Produktion, Fertigung
+DN: 99991090404
+CC: 1090404
+AB: Produktionsplanung, Fertigungssteuerung, Fertigungssysteme
+
+#99991090405
+TI: Marketing
+DN: 99991090405
+CC: 1090405
+AB: Produktpolitik, Preispolitik, Werbung, Verkauf, Distribution
+
+#99991090406
+TI: Finanzwirtschaft, Rechnungswesen
+DN: 99991090406
+CC: 1090406
+AB: Kapitalbeschaffung, Investitionsplanung, Jahresabschluß, Kostenrechnung
+
+#99991090599
+TI: Wirtschaftsstatistik, Ökonometrie, Wirtschaftsinformatik
+DN: 99991090599
+CC: 10905
+
+#99991099999
+TI: Sonstiges zu Wirtschaftswissenschaften
+DN: 99991099999
+CC: 10999
+
+#99991100099
+TI: Sozialpolitik
+DN: 99991100099
+CC: 11000
+
+#99991100199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Sozialpolitik
+DN: 99991100199
+CC: 11001
+
+#99991100299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Sozialpolitik
+DN: 99991100299
+CC: 11002
+AB: im Wissenschaftsbereich
+
+#99991100399
+TI: soziale Sicherung
+DN: 99991100399
+CC: 11003
+AB: Sozialversicherung allgemein, Krankenversicherung, Pflegeversicherung, Unfallversicherung, Arbeitslosenversicherung, Rentenversicherung, Beamtenversorgung, Kriegsopferversorgung
+
+#99991100499
+TI: Einkommenspolitik, Lohnpolitik, Tarifpolitik, Vermögenspolitik
+DN: 99991100499
+CC: 11004
+
+#99991100599
+TI: Arbeitswelt
+DN: 99991100599
+CC: 11005
+AB: Arbeitsbedingungen, Arbeitsschutz, Arbeitssicherheit
+
+#99991100699
+TI: Gesundheitspolitik
+DN: 99991100699
+CC: 11006
+AB: Gesundheit und Krankheit, öffentliches und privates Gesundheitswesen, Prävention im Gesundheitswesen, Rehabilitation
+
+#99991100799
+TI: Familienpolitik, Jugendpolitik, Altenpolitik
+DN: 99991100799
+CC: 11007
+
+#99991109999
+TI: Sonstiges zur Sozialpolitik
+DN: 99991109999
+CC: 11099
+AB: Trägerschaften spezieller Maßnahmen, Wohlfahrtsverbände
+
+#99992000099
+TI: Interdisziplinäre und angewandte Gebiete der Sozialwissenschaften
+DN: 99992000099
+CC: 20000
+
+#99992010099
+TI: Arbeitsmarkt- und Berufsforschung
+DN: 99992010099
+CC: 20100
+
+#99992010199
+TI: Arbeitsmarktforschung
+DN: 99992010199
+CC: 20101
+
+#99992010299
+TI: Berufsforschung. Berufssoziologie
+DN: 99992010299
+CC: 20102
+AB: Berufstheorie, Berufsfelder und einzelne Berufe, Berufswahl, Qualifizierung und Professionalisierung, Berufsverlauf, Berufsberatung, berufliche Rehabilitation
+
+#99992010399
+TI: Arbeitsmarktpolitik
+DN: 99992010399
+CC: 20103
+
+#99992020099
+TI: Frauenforschung
+DN: 99992020099
+CC: 20200
+AB: feministische Theorie, Geschlechterforschung, Frauen in der Gesellschaft (Diskriminierung, Förderung u.a.), weibliche Sozialisation, weibliche Identität, Frauenbild im geschichtlichen und interkulturellen Kontext
+
+#99992030099
+TI: Gerontologie. Alterssoziologie, Alternssoziologie, Gerontosoziologie, Soziologie des Sterbens und des Todes
+DN: 99992030099
+CC: 20300
+AB: Struktur, Bedeutung und Wandel von Alterskategorien im sozialen Leben, Lebensform und Lebensmöglichkeiten (gesundheitlich, finanziell, sozial u.a.)
+
+#99992040099
+TI: Freizeitforschung. Freizeitsoziologie, Sportsoziologie
+DN: 99992040099
+CC: 20400
+AB: Erholung, Freizeit, Sport, Tourismus
+
+#99992050099
+TI: soziale Probleme
+DN: 99992050099
+CC: 20500
+AB: Armut, Obdachlosigkeit, Behinderung, Krankheit, Sucht (Medikamenten-, Drogenabhängigkeit, Alkoholismus, Spielsucht u.a.), Devianz, abweichendes Verhalten, Gewalt, soziale Konflikte, Minderheitenprobleme, Rassenkonflikte, soziale Kontrolle
+
+#99992060099
+TI: Sozialarbeit und Sozialpädagogik
+DN: 99992060099
+CC: 20600
+
+#99992060199
+TI: Allgemeines, spezielle Theorien und "Schulen", Methoden, Entwicklung und Geschichte der Sozialarbeit und Sozialpädagogik
+DN: 99992060199
+CC: 20601
+
+#99992060299
+TI: Lehre und Studium, Professionalisierung und Ethik, Organisationen und Verbände der Sozialarbeit und Sozialpädagogik
+DN: 99992060299
+CC: 20602
+
+#99992060399
+TI: Sozialwesen, Sozialplanung Sozialarbeit, Sozialpädagogik
+DN: 99992060399
+CC: 20603
+AB: gruppenspezifische Sozialarbeit, (Jugendarbeit, Jugendhilfe, Familienfürsorge, Altenarbeit u.a.), Gemeinwesenarbeit, Suchtberatung, Resozialisation, Rehabilitation
+
+#99992069999
+TI: Sonstiges zur Sozialarbeit und Sozialpädagogik
+DN: 99992069999
+CC: 20699
+AB: Sozialverwaltung, Sozialstationen, Soziale Dienste (soweit nicht medizinische Dienste), Wohlfahrtsorganisationen, Sozialmarketing
+
+#99992070099
+TI: Raumplanung und Regionalforschung. Raumordnungspolitik, Regionalpolitik, Wohnungsbaupolitik, Verkehrspolitik
+DN: 99992070099
+CC: 20700
+AB: Euroregionen
+
+#99992080099
+TI: Technikfolgenabschätzung
+DN: 99992080099
+CC: 20800
+AB: soziale und wirtschaftliche Folgen des Technikeinsatzes
+
+#99992090099
+TI: Ökologie und Umwelt
+DN: 99992090099
+CC: 20900
+
+#99992990099
+TI: sonstige Bereiche der angewandten Sozialwissenschaften
+DN: 99992990099
+CC: 29900
+AB: Zukunftsforschung
+
+#99993000099
+TI: Geisteswissenschaften
+DN: 99993000099
+CC: 30000
+
+#99993010099
+TI: Philosophie, Theologie. Religionswissenschaft
+DN: 99993010099
+CC: 30100
+AB: Sozialphilosophie, Ethik
+
+#99993020099
+TI: Literaturwissenschaft, Sprachwissenschaft, Linguistik
+DN: 99993020099
+CC: 30200
+
+#99993030099
+TI: Geschichte
+DN: 99993030099
+CC: 30300
+
+#99993030199
+TI: allgemeine Geschichte
+DN: 99993030199
+CC: 30301
+AB: Archäologie, Vor- und Frühgeschichte, Geschichte des Altertums, Geschichte des Mittelalters, Neuere Geschichte, Neueste Geschichte, Zeitgeschichte, politische Geschichte
+
+#99993030299
+TI: Sozialgeschichte, historische Sozialforschung. Wirtschaftsgeschichte, Technikgeschichte
+DN: 99993030299
+CC: 30302
+
+#99993990099
+TI: sonstige Geisteswissenschaften
+DN: 99993990099
+CC: 39900
+AB: Museumskunde, Kunst, Kultur
+
+#99994000099
+TI: Rechtswissenschaft und Verwaltungswissenschaft
+DN: 99994000099
+CC: 40000
+
+#99994010099
+TI: Rechtswissenschaft
+DN: 99994010099
+CC: 40100
+
+#99994010199
+TI: Recht
+DN: 99994010199
+CC: 40101
+AB: Völkerrecht, Staatsrecht, Privatrecht, Sozialrecht, Arbeitsrecht, Ausländerrecht, Asylrecht
+
+#99994010299
+TI: Justiz
+DN: 99994010299
+CC: 40102
+AB: Organe der Justiz (Gerichte, Staatsanwaltschaft, Verteidigung u.a.), Strafverfolgung, Strafzumessung, Strafvollzug, Strafentlassung
+
+#99994020099
+TI: Verwaltungswissenschaft
+DN: 99994020099
+CC: 40200
+
+#99995000099
+TI: Naturwissenschaften, Technik, Medizin
+DN: 99995000099
+CC: 50000
+
+#99995010099
+TI: Medizin, Sozialmedizin
+DN: 99995010099
+CC: 50100
+
+#99995020099
+TI: Naturwissenschaften, Technik. Biosoziologie, Pflanzensoziologie, Tiersoziologie
+DN: 99995020099
+CC: 50200
+AB: wissenschaften, angewandte Wissenschaften. Arbeitswissenschaft, Ergonomie, Architektur, Bauingenieurwesen, Maschinenbau, Werkstoffkunde, Elektrotechnik, Informatik, Informations- und Kommunikationstechnologie, Softwareergonomie, Verkehrstechnik, Bergbau, Energietechnik, Verfahrenstechnologie, Mathematik, Physik, Chemie, Pharmazie, Astronomie, Geowissenschaften (Geologie, Geographie, Meteorologie u.a.), Biologie, Tiermedizin, Landwirtschaft, Hauswirtschaft, Ernährung
+

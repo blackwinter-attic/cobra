@@ -1,0 +1,10 @@
+Revision history for Perl extension COBRA
+
+0.0.1  Sun Jun 25 22:33:00 CEST 2006
+
+ - Initial release; emerged from "categorizer.pl", written for the collegiate
+   project "Automatische Klassifizierung von bibliografischen Referenzdaten" at
+   the Institute of Information Science, University of Applied Sciences Cologne
+   (Germany). This is a complete rewrite for my diploma thesis, trying to make
+   considerable use of Perl Best Practices - thanks Damian ;-)
+

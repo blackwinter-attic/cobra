@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>COBRA::Collection - Abstract base class for bibliographic collections</title>
+<link rev="made" href="mailto:feedback@suse.de" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;COBRA::Collection - Abstract base class for bibliographic collections</span></strong></big>
+</td></tr>
+</table>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description__still_missing__">DESCRIPTION [STILL MISSING!]</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#constructor">Constructor</a></li>
+		<li><a href="#public_interface_methods">Public interface methods</a></li>
+		<li><a href="#internal_utility_subroutines">Internal utility subroutines</a></li>
+	</ul>
+
+	<li><a href="#examples__still_missing__">EXAMPLES [STILL MISSING!]</a></li>
+	<li><a href="#diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></li>
+	<li><a href="#configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></li>
+	<li><a href="#dependencies__still_missing__">DEPENDENCIES [STILL MISSING!]</a></li>
+	<li><a href="#bugs_and_limitations">BUGS AND LIMITATIONS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#license_and_copyright">LICENSE AND COPYRIGHT</a></li>
+	<li><a href="#see_also_references">SEE ALSO/REFERENCES</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>COBRA::Collection - Abstract base class for bibliographic collections</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>This documentation refers to COBRA::Collection version 0.0.1</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+    Don't use COBRA::Collection directly, use an appropriate subclass instead.</pre>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="description__still_missing__">DESCRIPTION [STILL MISSING!]</a></h1>
+<p>A full description of the module and its features.
+May include numerous subsections (i.e., =head2, =head3, etc.)</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>A separate section listing the public components of the module's interface.
+These normally consist of methods that may be called on objects belonging to
+the classes that the module provides.</p>
+<p>In an object-oriented module, this section should begin with a sentence of the
+form ``An object of this class represents...'', to give the reader a high-level
+context to help them understand the methods that are subsequently described.</p>
+<p>
+</p>
+<h2><a name="constructor">Constructor</a></h2>
+<dl>
+<dt><strong><a name="item_new">new</a></strong><br />
+</dt>
+<dd>
+TO-BE-DOCUMENTED
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="public_interface_methods">Public interface methods</a></h2>
+<dl>
+<dt><strong><a name="item_do_import">do_import</a></strong><br />
+</dt>
+<dd>
+Imports the collection by first detecting which files to import (using the
+<a href="#item__get_data_files">_get_data_files()</a> function) and checking if there
+already are any data imported (using the
+<a href="../../../site/lib/COBRA/Util.html#item_check_for_files">COBRA::Util::check_for_files()</a> function)
+which will then be kept only if the <code>keepold</code> option was true. Then
+calls the collection object's <a href="#item_parse_records">parse_records()</a> method,
+saves the initial category information to a file (using the
+<a href="../../../site/lib/COBRA/Util.html#item_write_class_map">COBRA::Util::write_class_map()</a> function)
+and finally calls the indexer through <a href="#item__do_indexing">_do_indexing</a>.
+</dd>
+<dd>
+<p>Takes a hash reference of options as argument. These include: <code>data_files</code>,
+the data files to import (alternatively will be taken from the collection's
+<em>import/</em> directory); <code>class_map</code>, the file the initial category information
+shall be written to; <code>fields</code>, the list of fields to import from records;
+<code>ratio</code>, the percentage of records to use for testing (vs. training),
+additionally indicates whether the documents are determined for testing/training
+or categorizing or class integrity checking; and <code>keepold</code>, a boolean value
+specifying whether to exit when there already are imported data or to just give
+a warning.</p>
+</dd>
+<p></p>
+<dt><strong><a name="item_parse_records">parse_records</a></strong><br />
+</dt>
+<dd>
+Not implemented here, has to be overridden by subclasses in order to reflect
+collection type-specific characteristics. Takes a reference to the list of
+to-be-imported files and a reference to an option hash as arguments. Returns
+a reference to a hash of the class mapping and a reference to the array of
+written record files. See appropriate subclass for details.
+</dd>
+<p></p>
+<dt><strong><a name="item_write_record">write_record</a></strong><br />
+</dt>
+<dd>
+Writes each individual record to a file. Takes a reference to a list of lines
+to write and a reference to an option hash as arguments. Options include:
+<code>id</code>, the record identifier; <code>target_set</code>, the set, i.e. directory,
+to write the record to; and <code>duplicate</code>, a boolean value specifying whether
+all records shall be duplicated in the test directory (e.g., for class integrity
+checks). Returns a list of the files written.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="internal_utility_subroutines">Internal utility subroutines</a></h2>
+<dl>
+<dt><strong><a name="item__get_data_files">_get_data_files</a></strong><br />
+</dt>
+<dd>
+Determines the data files to import, i.e. either the supplied files (which will
+also be copied to the collection's <em>import/</em> directory) or the files from the
+collection's <em>import/</em> directory. Takes a list of data files as argument.
+Returns the list of files found (or simply those passed).
+</dd>
+<p></p>
+<dt><strong><a name="item__determine_target_set">_determine_target_set</a></strong><br />
+</dt>
+<dd>
+Determines the set, i.e. the directory, the current record file shall be written
+to, depending on the value of the ratio. Currently, it simply uses the ratio as
+probability -- in the future a more sophisticated approach may be implemented.
+Takes the ratio as argument. Returns the name of the target set (one of
+<code>'train'</code>, <code>'test'</code> or <code>'categorize'</code> -- in case the ratio is
+set up for integrity checking, the target set will be <code>'train'</code>).
+</dd>
+<p></p>
+<dt><strong><a name="item__do_indexing">_do_indexing</a></strong><br />
+</dt>
+<dd>
+Does the actual indexing of the record files by passing these files to the
+<a href="../../../site/lib/COBRA/WrapIndexer.html#item_run">COBRA::WrapIndexer::run()</a> method, and
+subsequently calling the
+<a href="../../../site/lib/COBRA/WrapIndexer.html#item_get_plain_results">COBRA::WrapIndexer::get_plain_results()</a>
+method. Decides whether indexing shall be performed at all if an object of a
+subclass of <a href="../../../site/lib/COBRA/WrapIndexer.html">COBRA::WrapIndexer</a> was supplied (created by
+<a href="../../../site/lib/COBRA.html#item_do_import">COBRA::do_import()</a>). Depending on the value of the
+<code>effect</code> attribute, the indexing results will be added to the original
+records or just replace them.
+</dd>
+<p></p></dl>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="examples__still_missing__">EXAMPLES [STILL MISSING!]</a></h1>
+<p>Many people learn better by example than by explanation, and most learn better
+by a combination of the two. Providing a <em>/demo</em> directory stocked with well-
+commented examples is an excellent idea, but users might not have access to the
+original distribution, and demos are unlikely to have been installed for them.
+Adding a few illustrative examples in the documentation itself can greatly
+increase the ``learnability'' of your code.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></h1>
+<p>A list of every error and warning message that the module can generate
+(even the ones that will ``never happen''), with a full explanation of each
+problem, one or more likely causes, and any suggested remedies.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></h1>
+<p>A full explanation of any configuration <code>system(s)</code> used by the module,
+including the names and locations of any configuration files, and the
+meaning of any environment variables and properties that can be set. These
+descriptions must also include details of any configuration language used.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="dependencies__still_missing__">DEPENDENCIES [STILL MISSING!]</a></h1>
+<p>A list of all the other modules that this module relies upon, including any
+restrictions on versions, and an indication of whether these required modules
+are part of the standard Perl distribution, part of the module's distribution,
+or must be installed separately.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="bugs_and_limitations">BUGS AND LIMITATIONS</a></h1>
+<p>A list of known problems with the module, together with some indications of
+whether they are likely to be fixed in an upcoming release.</p>
+<p>Also a list of restrictions on the features the module does provide:
+data types that cannot be handled, performance issues and the circumstances
+in which they may arise, practical limitations on the size of data sets,
+special cases that are not (yet) handled, etc.</p>
+<p>There are no known bugs in this module. Please report problems to Jens Wille
+<code>&lt;jens.wille@gmail.com&gt;</code>. Patches are welcome.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="license_and_copyright">LICENSE AND COPYRIGHT</a></h1>
+<p>Copyright (C) 2006 Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="see_also_references">SEE ALSO/REFERENCES</a></h1>
+<p>Often there will be other modules and applications that are possible
+alternatives to using your software. Or other documentation that would be of
+use to the users of your software. Or a journal article or book that explains
+the ideas on which the software is based. Listing those in a ``See Also'' section
+allows people to understand your software better and to find the best solution
+for their problems themselves, without asking you directly.</p>
+<p><a href="../../../site/lib/COBRA.html">COBRA</a>, <a href="../../../site/lib/COBRA/Collection/Generic.html">COBRA::Collection::Generic</a>,
+<a href="../../../site/lib/COBRA/Collection/STN/SOLIS.html">COBRA::Collection::STN::SOLIS</a>,
+<a href="../../../site/COBRA/Collection/SimpleSOLIS.html">COBRA::Collection::SimpleSOLIS</a></p>
+<p><a href="#__index__"><small>Back to Top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;COBRA::Collection - Abstract base class for bibliographic collections</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

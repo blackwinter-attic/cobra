@@ -1,0 +1,166 @@
+NAME
+    COBRA - Classification Of Bibliographic Records, Automatic
+
+VERSION
+    This documentation refers to COBRA version 0.0.1
+
+INTRODUCTION
+    The Perl extension COBRA is basically a wrapper around AI::Categorizer
+    aimed at categorizing bibliographic records, with the intended purpose
+    to ease its use and allow for proper integration into a library's
+    workflow. It originated from the author's diploma thesis "Automatisches
+    Klassifizieren bibliographischer Beschreibungsdaten: Vorgehensweise und
+    Ergebnisse" while studying librarianship at the Institute of Information
+    Science, University of Applied Sciences Cologne (Germany).
+
+    COBRA has been developed and tested on Linux with Perl 5.8.1. However,
+    it *should* run on other platforms just as well. If you encounter any
+    problems, platform-related or not, please don't hesitate to drop me a
+    line.
+
+INSTALLATION
+    Actually, if you are going to use the cobra.pl program you don't need to
+    install anything (apart from dependencies, of course) since COBRA is not
+    capable of handling such an installation yet. Just unpack the archive - as you
+    are reading this right now, you most probably already did -, change into the
+    newly created directory and run "bin/cobra.pl --help" for usage instructions.
+    
+    However, if you're daring enough, or just for future versions, read on for an
+    exposition of the installation procedure.
+    
+    To install this module, just do:
+    
+      perl Build.PL
+      ./Build
+      ./Build test
+      ./Build install  (this step may need to be done as the superuser)
+    
+    Or, if you're on a platform (like DOS or Windows) that doesn't require
+    the "./" notation, you can do this:
+    
+      perl Build.PL
+      Build
+      Build test
+      Build install
+    
+    The important thing is that the "Build" script gets executed and that you
+    pass it the "test", "install", etc. arguments.
+    
+    If you really want to, you can use a more traditional Makefile.PL:
+    
+      perl Makefile.PL
+      make test
+      make install     (this step may need to be done as the superuser)
+    
+    Substitute "nmake" or "gmake" for "make" if you use some other make-alike
+    on your platform - 'perl -V:make' can tell you what you should use.
+    
+    It's recommended to use the Build.PL option. If you use the Makefile.PL
+    option, you'll actually be using the Build.PL option under the surface
+    anyway, with a pass-through Makefile.
+
+DEPENDENCIES
+    A list of all the other modules that this module relies upon, including
+    any restrictions on versions, and an indication of whether these
+    required modules are part of the standard Perl distribution, part of the
+    module's distribution, or must be installed separately.
+
+    Some of these may themselves require additional modules. Use the CPAN
+    shell (or ppm on Windows) to follow these dependencies automatically.
+
+    * Perl
+        Version greater than 5.8.1 (check with "perl -v").
+
+    * AI::Categorizer
+        At least version 0.07. Available from CPAN.
+
+    * Carp
+        [STANDARD MODULE]
+
+    * Class::Std
+        At least version 0.0.8. Available from CPAN.
+
+    * Config::General
+        Available from CPAN.
+
+    * Cwd
+        [STANDARD MODULE]
+
+    * Fatal
+        [STANDARD MODULE]
+
+    * File::chdir
+        Available from CPAN.
+
+    * File::Copy
+        [STANDARD MODULE]
+
+    * File::Find
+        [STANDARD MODULE]
+
+    * File::Path
+        [STANDARD MODULE]
+
+    * File::Slurp
+        Available from CPAN.
+
+    * File::Spec
+        [STANDARD MODULE]
+
+    * FindBin
+        [STANDARD MODULE]
+
+    * Getopt::Euclid
+        At least version 0.0.5. Available from CPAN.
+
+    * IO::Prompt
+        Available from CPAN.
+
+    * List::MoreUtils
+        Available from CPAN.
+
+    * POSIX
+        [STANDARD MODULE]
+
+    * Readonly
+        Available from CPAN.
+
+    * Smart::Comments
+        Available from CPAN.
+
+    * Test::More
+        [STANDARD MODULE]
+
+    * version
+        Available from CPAN.
+
+RECENT CHANGES
+    0.0.1  Sun Jun 25 22:33:00 CEST 2006
+    
+     - Initial release; emerged from "categorizer.pl", written for the collegiate
+       project "Automatische Klassifizierung von bibliografischen Referenzdaten" at
+       the Institute of Information Science, University of Applied Sciences Cologne
+       (Germany). This is a complete rewrite for my diploma thesis, trying to make
+       considerable use of Perl Best Practices - thanks Damian ;-)
+
+LICENSE AND COPYRIGHT
+    Copyright (C) 2006 Jens Wille "<jens.wille@gmail.com>"
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your
+    option) any later version.
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+FURTHER READING
+    For more information see the documentation of the various packages in
+    this distribution.
+

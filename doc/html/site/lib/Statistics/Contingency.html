@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Statistics::Contingency - Calculate precision, recall, F1, accuracy, etc.</title>
+<link rev="made" href="mailto:feedback@suse.de" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;Statistics::Contingency - Calculate precision, recall, F1, accuracy, etc.</span></strong></big>
+</td></tr>
+</table>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+
+		<li><a href="#macro_vs__micro_statistics">Macro vs. Micro Statistics</a></li>
+		<li><a href="#statistics_available">Statistics available</a></li>
+	</ul>
+
+	<li><a href="#methods">METHODS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#copyright">COPYRIGHT</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>Statistics::Contingency - Calculate precision, recall, F1, accuracy, etc.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+ use Statistics::Contingency;
+ my $s = new Statistics::Contingency(categories =&gt; \@all_categories);
+ 
+ while (...something...) {
+   ...
+   $s-&gt;add_result($assigned_categories, $correct_categories);
+ }
+ 
+ print &quot;Micro F1: &quot;, $s-&gt;micro_F1, &quot;\n&quot;; # Access a single statistic
+ print $s-&gt;stats_table; # Show several stats in table form</pre>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The <code>Statistics::Contingency</code> class helps you calculate several
+useful statistical measures based on 2x2 ``contingency tables''.  I use
+these measures to help judge the results of automatic text
+categorization experiments, but they are useful in other situations as
+well.</p>
+<p>The general usage flow is to tally a whole bunch of results in the
+<code>Statistics::Contingency</code> object, then query that object to obtain
+the measures you are interested in.  When all results have been
+collected, you can get a report on accuracy, precision, recall, F1,
+and so on, with both macro-averaging and micro-averaging over
+categories.</p>
+<p>
+</p>
+<h2><a name="macro_vs__micro_statistics">Macro vs. Micro Statistics</a></h2>
+<p>All of the statistics offered by this module can be calculated for
+each category and then averaged, or can be calculated over all
+decisions and then averaged.  The former is called macro-averaging
+(specifically, macro-averaging with respect to category), and the
+latter is called micro-averaging.  The two procedures bias the results
+differently - micro-averaging tends to over-emphasize the performance
+on the largest categories, while macro-averaging over-emphasizes the
+performance on the smallest.  It's often best to look at both of them
+to get a good idea of how your data distributes across categories.</p>
+<p>
+</p>
+<h2><a name="statistics_available">Statistics available</a></h2>
+<p>All of the statistics are calculated based on a so-called ``contingency
+table'', which looks like this:</p>
+<pre>
+              Correct=Y   Correct=N
+            +-----------+-----------+
+ Assigned=Y |     a     |     b     |
+            +-----------+-----------+
+ Assigned=N |     c     |     d     |
+            +-----------+-----------+</pre>
+<p>a, b, c, and d are counts that reflect how the assigned categories
+matched the correct categories.  Depending on whether a
+macro-statistic or a micro-statistic is being calculated, these
+numbers will be tallied per-category or for the entire result set.</p>
+<p>The following statistics are available:</p>
+<ul>
+<li><strong><a name="item_accuracy">accuracy</a></strong><br />
+</li>
+This measures the portion of all decisions that were correct
+decisions.  It is defined as <code>(a+d)/(a+b+c+d)</code>.  It falls in the
+range from 0 to 1, with 1 being the best score.
+<p>Note that macro-accuracy and micro-accuracy will always give the same
+number.</p>
+<p></p>
+<li><strong><a name="item_error">error</a></strong><br />
+</li>
+This measures the portion of all decisions that were incorrect
+decisions.  It is defined as <code>(b+c)/(a+b+c+d)</code>.  It falls in the
+range from 0 to 1, with 0 being the best score.
+<p>Note that macro-error and micro-error will always give the same
+number.</p>
+<p></p>
+<li><strong><a name="item_precision">precision</a></strong><br />
+</li>
+This measures the portion of the assigned categories that were
+correct.  It is defined as <code>a/(a+b)</code>.  It falls in the range from 0
+to 1, with 1 being the best score.
+<p></p>
+<li><strong><a name="item_recall">recall</a></strong><br />
+</li>
+This measures the portion of the correct categories that were
+assigned.  It is defined as <code>a/(a+c)</code>.  It falls in the range from 0
+to 1, with 1 being the best score.
+<p></p>
+<li><strong><a name="item_f1">F1</a></strong><br />
+</li>
+This measures an even combination of precision and recall.  It is
+defined as <code>2*p*r/(p+r)</code>.  In terms of a, b, and c, it may be
+expressed as <code>2a/(2a+b+c)</code>.  It falls in the range from 0 to 1, with
+1 being the best score.
+<p></p></ul>
+<p>The F1 measure is often the only simple measure that is worth trying
+to maximize on its own - consider the fact that you can get a perfect
+precision score by always assigning zero categories, or a perfect
+recall score by always assigning every category.  A truly smart system
+will assign the correct categories and only the correct categories,
+maximizing precision and recall at the same time, and therefore
+maximizing the F1 score.</p>
+<p>Sometimes it's worth trying to maximize the accuracy score, but
+accuracy (and its counterpart error) are considered fairly crude
+scores that don't give much information about the performance of a
+categorizer.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>The general execution flow when using this class is to create a
+<code>Statistics::Contingency</code> object, add a bunch of results to it, and
+then report on the results.</p>
+<ul>
+<li><strong><a name="item_new">$e = Statistics::Contingency-&gt;<code>new()</code></a></strong><br />
+</li>
+Returns a new <code>Statistics::Contingency</code> object.  Expects a
+<code>categories</code> parameter specifying the entire set of categories that
+may be assigned during this experiment.  Also accepts a <code>verbose</code>
+parameter - if true, some diagnostic status information will be
+displayed when certain actions are performed.
+<p></p>
+<li><strong><a name="item_add_result">$e-&gt;add_result($assigned_categories, $correct_categories, $name)</a></strong><br />
+</li>
+Adds a new result to the experiment.  The lists of assigned and
+correct categories can be given as an array of category names
+(strings), as a hash whose keys are the category names and whose
+values are anything logically true, or as a single string if there is
+only one category.
+<p>If you've already got the lists in hash form, this will be the fastest
+way to pass them.  Otherwise, the current implementation will convert
+them to hash form internally in order to make its calculations
+efficient.</p>
+<p>The <code>$name</code> parameter is an optional name for this result.  It will
+only be used in error messages or debugging/progress output.</p>
+<p>In the current implementation, we only store the contingency tables
+per category, as well as a table for the entire result set.  This
+means that you can't recover information about any particular single
+result from the <code>Statistics::Contingency</code> object.</p>
+<p></p>
+<li><strong><a name="item_micro_accuracy">$e-&gt;micro_accuracy</a></strong><br />
+</li>
+Returns the micro-averaged accuracy for the data set.
+<p></p>
+<li><strong><a name="item_micro_error">$e-&gt;micro_error</a></strong><br />
+</li>
+Returns the micro-averaged error for the data set.
+<p></p>
+<li><strong><a name="item_micro_precision">$e-&gt;micro_precision</a></strong><br />
+</li>
+Returns the micro-averaged precision for the data set.
+<p></p>
+<li><strong><a name="item_micro_recall">$e-&gt;micro_recall</a></strong><br />
+</li>
+Returns the micro-averaged recall for the data set.
+<p></p>
+<li><strong><a name="item_micro_f1">$e-&gt;micro_F1</a></strong><br />
+</li>
+Returns the micro-averaged F1 for the data set.
+<p></p>
+<li><strong><a name="item_macro_accuracy">$e-&gt;macro_accuracy</a></strong><br />
+</li>
+Returns the macro-averaged accuracy for the data set.
+<p></p>
+<li><strong><a name="item_macro_error">$e-&gt;macro_error</a></strong><br />
+</li>
+Returns the macro-averaged error for the data set.
+<p></p>
+<li><strong><a name="item_macro_precision">$e-&gt;macro_precision</a></strong><br />
+</li>
+Returns the macro-averaged precision for the data set.
+<p></p>
+<li><strong><a name="item_macro_recall">$e-&gt;macro_recall</a></strong><br />
+</li>
+Returns the macro-averaged recall for the data set.
+<p></p>
+<li><strong><a name="item_macro_f1">$e-&gt;macro_F1</a></strong><br />
+</li>
+Returns the macro-averaged F1 for the data set.
+<p></p>
+<li><strong><a name="item_stats_table">$e-&gt;stats_table</a></strong><br />
+</li>
+Returns a string combining several statistics in one graphic table.
+Since accuracy is 1 minus error, we only report error since it takes
+less space to print.  An optional argument specifies the number of
+significant digits to show in the data - the default is 3 significant
+digits.
+<p></p>
+<li><strong><a name="item_category_stats">$e-&gt;category_stats</a></strong><br />
+</li>
+Returns a hash reference whose keys are the names of each category,
+and whose values contain the various statistical measures (accuracy,
+error, precision, recall, or F1) about each category as a hash reference.  For
+example, to print a single statistic:
+<pre>
+ print $e-&gt;category_stats-&gt;{sports}{recall}, &quot;\n&quot;;</pre>
+<p>Or to print certain statistics for all categtories:
+</p>
+<pre>
+
+ my $stats = $e-&gt;category_stats;
+ while (my ($cat, $value) = each %$stats) {
+   print &quot;Category '$cat': \n&quot;;
+   print &quot;  Accuracy: $value-&gt;{accuracy}\n&quot;;
+   print &quot;  Precision: $value-&gt;{precision}\n&quot;;
+   print &quot;  F1: $value-&gt;{F1}\n&quot;;
+ }</pre>
+<p></p></ul>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Ken Williams &lt;<a href="mailto:kenw@ee.usyd.edu.au">kenw@ee.usyd.edu.au</a>&gt;
+
+</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="copyright">COPYRIGHT</a></h1>
+<p>Copyright 2002 Ken Williams.  All rights reserved.
+
+</p>
+<p>This distribution is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
+</p>
+<p><a href="#__index__"><small>Back to Top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;Statistics::Contingency - Calculate precision, recall, F1, accuracy, etc.</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

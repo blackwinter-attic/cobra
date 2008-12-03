@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>COBRA - Classification Of Bibliographic Records, Automatic</title>
+<link rev="made" href="mailto:feedback@suse.de" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;COBRA - Classification Of Bibliographic Records, Automatic</span></strong></big>
+</td></tr>
+</table>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#synopsis__still_missing__">SYNOPSIS [STILL MISSING!]</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+
+		<li><a href="#actions">Actions</a></li>
+		<li><a href="#learners__still_missing__">Learners [STILL MISSING!]</a></li>
+		<li><a href="#export_formats__still_missing__">Export formats [STILL MISSING!]</a></li>
+	</ul>
+
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#constructor">Constructor</a></li>
+		<li><a href="#public_interface_methods">Public interface methods</a></li>
+		<li><a href="#internal_utility_subroutines">Internal utility subroutines</a></li>
+	</ul>
+
+	<li><a href="#examples__still_missing__">EXAMPLES [STILL MISSING!]</a></li>
+	<li><a href="#diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></li>
+	
+	
+	<li><a href="#configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></li>
+	<li><a href="#dependencies">DEPENDENCIES</a></li>
+	
+	<li><a href="#bugs_and_limitations">BUGS AND LIMITATIONS</a></li>
+	<ul>
+
+		<li><a href="#known_issues">Known issues</a></li>
+	</ul>
+
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#license_and_copyright">LICENSE AND COPYRIGHT</a></li>
+	<li><a href="#see_also_references">SEE ALSO/REFERENCES</a></li>
+	
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>COBRA - Classification Of Bibliographic Records, Automatic</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>This documentation refers to COBRA version 0.0.1</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="synopsis__still_missing__">SYNOPSIS [STILL MISSING!]</a></h1>
+<pre>
+    use COBRA;
+    # Brief but working code example(s) here showing the most common usage(s)</pre>
+<pre>
+    # This section will be as far as many users bother reading,
+    # so make it as educational and exemplary as possible.</pre>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>A full description of the module and its features.
+May include numerous subsections (i.e., =head2, =head3, etc.)</p>
+<p>
+</p>
+<h2><a name="actions">Actions</a></h2>
+<dl>
+<dt><strong><a name="item_create">create</a></strong><br />
+</dt>
+<dd>
+Create initial collection. (See <a href="#item_do_create">do_create()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_import">import</a></strong><br />
+</dt>
+<dd>
+Import data into collection. (See <a href="#item_do_import">do_import()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_train">train</a></strong><br />
+</dt>
+<dd>
+Train learner on collection training data. (See <a href="#item_do_train">do_train()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_test">test</a></strong><br />
+</dt>
+<dd>
+Categorize test data and print statistics. (See <a href="#item_do_test">do_test()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_categorize">categorize</a></strong><br />
+</dt>
+<dd>
+Categorize imported data. (See <a href="#item_do_categorize">do_categorize()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_export">export</a></strong><br />
+</dt>
+<dd>
+Export collection data/statistics to specified format. (See
+<a href="#item_do_export">do_export()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_purge">purge</a></strong><br />
+</dt>
+<dd>
+Clean up the collection (don't delete it though). Use with caution! (See
+<a href="#item_do_purge">do_purge()</a>)
+</dd>
+<p></p>
+<dt><strong><a name="item_remove">remove</a></strong><br />
+</dt>
+<dd>
+Finally remove the collection (are you sure?). Use with extra caution!!
+(See <a href="#item_do_remove">do_remove()</a>)
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="learners__still_missing__">Learners [STILL MISSING!]</a></h2>
+<p>Description of machine learning algorithms.</p>
+<p>
+</p>
+<h2><a name="export_formats__still_missing__">Export formats [STILL MISSING!]</a></h2>
+<p>Description of export formats.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>A separate section listing the public components of the module's interface.
+These normally consist of methods that may be called on objects belonging to
+the classes that the module provides.</p>
+<p>In an object-oriented module, this section should begin with a sentence of the
+form ``An object of this class represents...'', to give the reader a high-level
+context to help them understand the methods that are subsequently described.</p>
+<p>
+</p>
+<h2><a name="constructor">Constructor</a></h2>
+<dl>
+<dt><strong><a name="item_new">new</a></strong><br />
+</dt>
+<dd>
+TO-BE-DOCUMENTED
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="public_interface_methods">Public interface methods</a></h2>
+<dl>
+<dt><strong><a name="item_do_action">do_action</a></strong><br />
+</dt>
+<dd>
+Performs the specified actions, calling the appropriate <code>do_&lt;action&gt;()</code>
+methods in turn. Takes an array reference of actions or a string of an
+action as optional argument, otherwise uses the object's action attribute,
+which itself can be an array ref or a string.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_create">do_create</a></strong><br />
+</dt>
+<dd>
+Creates the specified collection, taken from the object's collection attribute,
+by creating a directory structure below the <em>collect/</em> directory and by
+cloning the global configuration file, thus providing the possibility to write
+down collection-specific settings.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_import">do_import</a></strong><br />
+</dt>
+<dd>
+Imports the data into the collection by creating a new
+<a href="../../site/lib/COBRA/Collection.html">COBRA::Collection</a> object according to the collection type
+attribute and subsequently calling this collection object's
+<a href="../../site/lib/COBRA/Collection.html#item_do_import">do_import()</a> method. Also allows to carry out
+automatic indexing by creating a new <a href="../../site/lib/COBRA/WrapIndexer.html">COBRA::WrapIndexer</a>
+object if requested and passing that object to the collection constructor.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_train">do_train</a></strong><br />
+</dt>
+<dd>
+Trains a learner of the specified class on previously imported training data by
+creating a new <a href="../../site/AI/Categorizer.html">AI::Categorizer</a> object and then calling the
+appropriate methods on that object.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_test">do_test</a></strong><br />
+</dt>
+<dd>
+Tests previously imported test data against the previously trained learner by
+creating a new <a href="../../site/AI/Categorizer.html">AI::Categorizer</a> object, which then restores
+its state, and then calling the appropriate methods on that object.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_categorize">do_categorize</a></strong><br />
+</dt>
+<dd>
+Categorizes previously imported to-be-categorized data using the previously
+trained learner by creating a new <a href="../../site/AI/Categorizer.html">AI::Categorizer</a> object,
+which then restores its state, and then calling the utility method
+<a href="#item__categorize_collection">_categorize_collection()</a> and finally the helper
+subroutine <a href="../../site/lib/COBRA/Util.html#item_write_class_map">COBRA::Util::write_class_map()</a>.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_export">do_export</a></strong><br />
+</dt>
+<dd>
+Exports the collection to various formats, including the original one, by
+creating an appropriate <a href="../../site/lib/COBRA/Export.html">COBRA::Export</a> object. <strong>NOT
+IMPLEMENTED YET!</strong>
+</dd>
+<p></p>
+<dt><strong><a name="item_do_purge">do_purge</a></strong><br />
+</dt>
+<dd>
+Cleans up the collection, i.e. deletes any files in the collection's
+<em>records/</em> directories as well as in its <em>export/</em> and <em>state/</em>
+directories.
+</dd>
+<p></p>
+<dt><strong><a name="item_do_remove">do_remove</a></strong><br />
+</dt>
+<dd>
+Removes the collection completely by simply deleting its base directory. Make
+sure you don't need it anymore, since all data will be lost!
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="internal_utility_subroutines">Internal utility subroutines</a></h2>
+<dl>
+<dt><strong><a name="item__clone_conf">_clone_conf</a></strong><br />
+</dt>
+<dd>
+Clones the global configuration file and writes it to the collection's <em>etc/</em>
+directory. (Nothing exciting here at the moment ;-)
+</dd>
+<p></p>
+<dt><strong><a name="item__evaluate_test_set">_evaluate_test_set</a></strong><br />
+</dt>
+<dd>
+Imitates the
+<a href="../../site/AI/Categorizer.html#item_evaluate_test_set">AI::Categorizer::evaluate_test_set()</a>
+function, but differs in that it restores the learner <em>properly</em> (see
+<a href="#item__restore_learner">_restore_learner()</a>). Takes an
+<a href="../../site/AI/Categorizer.html">AI::Categorizer</a> object as argument. Returns the
+<a href="../../site/AI/Categorizer/Experiment.html">AI::Categorizer::Experiment</a> object created by
+that object.
+</dd>
+<p></p>
+<dt><strong><a name="item__categorize_collection">_categorize_collection</a></strong><br />
+</dt>
+<dd>
+Does the actual <a href="../../site/AI/Categorizer.html">AI::Categorizer</a> method calls to categorize
+the collection. Takes an <a href="../../site/AI/Categorizer.html">AI::Categorizer</a> object as argument.
+Returns a hash of <code>document =&gt; list of assigned categories</code> pairs.
+</dd>
+<p></p>
+<dt><strong><a name="item__restore_learner">_restore_learner</a></strong><br />
+</dt>
+<dd>
+Restores the learner from the saved state, thereby ignoring any specified
+learner. At the same time works around a bug in
+<a href="../../site/AI/Categorizer/Learner/NaiveBayes.html">AI::Categorizer::Learner::NaiveBayes</a>.
+Takes an <a href="../../site/AI/Categorizer.html">AI::Categorizer</a> object as argument. Returns the
+restored <a href="../../site/AI/Categorizer/Learner.html">AI::Categorizer::Learner</a> object.
+</dd>
+<p></p>
+<dt><strong><a name="item__next_document">_next_document</a></strong><br />
+</dt>
+<dd>
+Imitates the
+<a href="../../site/AI/Categorizer/Collection.html#item_next">AI::Categorizer::Collection::next()</a>
+function, but differs in that it suppresses those annoying warnings when there
+is no category information for the document -- of course there is none when
+categorizing!
+</dd>
+<p></p></dl>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="examples__still_missing__">EXAMPLES [STILL MISSING!]</a></h1>
+<p>Many people learn better by example than by explanation, and most learn better
+by a combination of the two. Providing a <em>/demo</em> directory stocked with well-
+commented examples is an excellent idea, but users might not have access to the
+original distribution, and demos are unlikely to have been installed for them.
+Adding a few illustrative examples in the documentation itself can greatly
+increase the ``learnability'' of your code.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></h1>
+<p>A list of every error and warning message that the module can generate
+(even the ones that will ``never happen''), with a full explanation of each
+problem, one or more likely causes, and any suggested remedies.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></h1>
+<p>A full explanation of any configuration systems used by the module,
+including the names and locations of any configuration files, and the
+meaning of any environment variables and properties that can be set. These
+descriptions must also include details of any configuration language used.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="dependencies">DEPENDENCIES</a></h1>
+<p>A list of all the other modules that this module relies upon, including any
+restrictions on versions, and an indication of whether these required modules
+are part of the standard Perl distribution, part of the module's distribution,
+or must be installed separately.</p>
+<p>Some of these may themselves require additional modules. Use the CPAN shell
+(or ppm on Windows) to follow these dependencies automatically.</p>
+<ul>
+<li><strong><a name="item_perl">Perl</a></strong><br />
+</li>
+Version greater than 5.8.1 (check with <code>perl -v</code>).
+<p></p>
+<li><strong><a name="item_ai_3a_3acategorizer">AI::Categorizer</a></strong><br />
+</li>
+At least version 0.07. Available from CPAN.
+<p></p>
+<li><strong><a name="item_carp">Carp</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_class_3a_3astd">Class::Std</a></strong><br />
+</li>
+At least version 0.0.8. Available from CPAN.
+<p></p>
+<li><strong><a name="item_config_3a_3ageneral">Config::General</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_cwd">Cwd</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_fatal">Fatal</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_file_3a_3achdir">File::chdir</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_file_3a_3acopy">File::Copy</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_file_3a_3afind">File::Find</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_file_3a_3apath">File::Path</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_file_3a_3aslurp">File::Slurp</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_file_3a_3aspec">File::Spec</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_findbin">FindBin</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_getopt_3a_3aeuclid">Getopt::Euclid</a></strong><br />
+</li>
+At least version 0.0.5. Available from CPAN.
+<p></p>
+<li><strong><a name="item_io_3a_3aprompt">IO::Prompt</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_list_3a_3amoreutils">List::MoreUtils</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_posix">POSIX</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_readonly">Readonly</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_smart_3a_3acomments">Smart::Comments</a></strong><br />
+</li>
+Available from CPAN.
+<p></p>
+<li><strong><a name="item_test_3a_3amore">Test::More</a></strong><br />
+</li>
+[STANDARD MODULE]
+<p></p>
+<li><strong><a name="item_version">version</a></strong><br />
+</li>
+Available from CPAN.
+<p></p></ul>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="bugs_and_limitations">BUGS AND LIMITATIONS</a></h1>
+<p>A list of known problems with the module, together with some indications of
+whether they are likely to be fixed in an upcoming release.</p>
+<p>Also a list of restrictions on the features the module does provide:
+data types that cannot be handled, performance issues and the circumstances
+in which they may arise, practical limitations on the size of data sets,
+special cases that are not (yet) handled, etc.</p>
+<p>There are no known bugs in this module. Please report problems to Jens Wille
+<code>&lt;jens.wille@gmail.com&gt;</code>. Patches are welcome.</p>
+<p>
+</p>
+<h2><a name="known_issues">Known issues</a></h2>
+<ul>
+<li><strong><a name="item_statistics_3a_3acontingency_error_3a_can_27t_take_">Statistics::Contingency error: Can't take log of 0 at
+/usr/lib/perl5/site_perl/5.8.1/Statistics/Contingency.pm line 183.</a></strong><br />
+</li>
+<pre>
+    modified: my $after_point = $figs - int log($number)/log(10);
+    =&gt;        my $after_point = $figs - ($number ? int log($number)/log(10) : 0);</pre>
+<p>(modified version in <em>lib/</em>)</p>
+<li><strong><a name="item_ai_3a_3acategorizer_3a_3aknowledgeset_error_3a_mod">AI::Categorizer::KnowledgeSet error: Modification of a read-only value attempted
+at /usr/lib/perl5/site_perl/5.8.1/AI/Categorizer/KnowledgeSet.pm line 415.</a></strong><br />
+</li>
+<pre>
+    modified: while (&lt;$fh&gt;) {
+                next if /^#/;
+                /^(.*)\t([\d.]+)$/ or croak &quot;Malformed line: $_&quot;;
+    =&gt;        while (my $l = &lt;$fh&gt;) {
+                next if $l =~ /^#/;
+                $l =~ /^(.*)\t([\d.]+)$/ or croak &quot;Malformed line: $l&quot;;</pre>
+<p>(modified version in <em>lib/</em>)</p>
+</ul>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="license_and_copyright">LICENSE AND COPYRIGHT</a></h1>
+<p>Copyright (C) 2006 Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="see_also_references">SEE ALSO/REFERENCES</a></h1>
+<p>Often there will be other modules and applications that are possible
+alternatives to using your software. Or other documentation that would be of
+use to the users of your software. Or a journal article or book that explains
+the ideas on which the software is based. Listing those in a ``See Also'' section
+allows people to understand your software better and to find the best solution
+for their problems themselves, without asking you directly.</p>
+<p>COBRA was named after the article ``Classification of text, automatic'' by
+Fabrizio Sebastiani (In: Keith Brown (ed.), The Encyclopedia of Language and
+Linguistics, Volume 14, 2nd Edition, Elsevier Science Publishers, Amsterdam,
+NL, 2006, pp. 457-462.), available online at
+<a href="http://www.math.unipd.it/~fabseb60/Publications/ELL06.pdf">http://www.math.unipd.it/~fabseb60/Publications/ELL06.pdf</a>.</p>
+<p><a href="../../site/lib/COBRA/Collection.html">COBRA::Collection</a>, <a href="../../site/lib/COBRA/Export.html">COBRA::Export</a>,
+<a href="../../site/lib/COBRA/WrapIndexer.html">COBRA::WrapIndexer</a>, <a href="../../site/lib/COBRA/Util.html">COBRA::Util</a></p>
+<p><a href="#__index__"><small>Back to Top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;COBRA - Classification Of Bibliographic Records, Automatic</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

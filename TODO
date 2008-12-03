@@ -1,0 +1,25 @@
+ToDo list for Perl extension COBRA (roughly sorted by descending importance)
+
+essential (for v0.1):
+
+ - THOROUGH DOCUMENTATION!
+
+ - Allow for export of original collection format and emission of
+   collection/classification statistics!
+
+ - Allow for specification of learner-specific parameters.
+
+ - Add progress information, logging and the likes (using Log::Log4perl!?),
+   and account for specified level of verbosity.
+
+
+other:
+
+ - Add/implement export formats (Midos, Gnuplot, MAB?, MARC?, ...).
+
+ - Add import formats (MAB, MARC, ...).
+
+ - Add demo collection?
+
+ - Write loads of test files!!!
+

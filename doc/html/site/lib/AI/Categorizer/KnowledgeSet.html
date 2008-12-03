@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI::Categorizer::KnowledgeSet - Encapsulates set of documents</title>
+<link rev="made" href="mailto:feedback@suse.de" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;AI::Categorizer::KnowledgeSet - Encapsulates set of documents</span></strong></big>
+</td></tr>
+</table>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#copyright">COPYRIGHT</a></li>
+	<li><a href="#see_also">SEE ALSO</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>AI::Categorizer::KnowledgeSet - Encapsulates set of documents</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+ use AI::Categorizer::KnowledgeSet;
+ my $k = new AI::Categorizer::KnowledgeSet(...parameters...);
+ my $nb = new AI::Categorizer::Learner::NaiveBayes(...parameters...);
+ $nb-&gt;train(knowledge_set =&gt; $k);</pre>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The KnowledgeSet class that provides an interface to a set of
+documents, a set of categories, and a mapping between the two.  Many
+parameters for controlling the processing of documents are managed by
+the KnowledgeSet class.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<dl>
+<dt><strong><a name="item_new"><code>new()</code></a></strong><br />
+</dt>
+<dd>
+Creates a new KnowledgeSet and returns it.  Accepts the following
+parameters:
+</dd>
+<dl>
+<dt><strong><a name="item_load">load</a></strong><br />
+</dt>
+<dd>
+If a <a href="#item_load"><code>load</code></a> parameter is present, the <a href="#item_load"><code>load()</code></a> method will be
+invoked immediately.  If the <a href="#item_load"><code>load</code></a> parameter is a string, it will be
+passed as the <code>path</code> parameter to <a href="#item_load"><code>load()</code></a>.  If the <a href="#item_load"><code>load</code></a>
+parameter is a hash reference, it will represent all the parameters to
+pass to <a href="#item_load"><code>load()</code></a>.
+</dd>
+<p></p>
+<dt><strong><a name="item_categories">categories</a></strong><br />
+</dt>
+<dd>
+An optional reference to an array of Category objects representing the
+complete set of categories in a KnowledgeSet.  If used, the
+<a href="#item_documents"><code>documents</code></a> parameter should also be specified.
+</dd>
+<p></p>
+<dt><strong><a name="item_documents">documents</a></strong><br />
+</dt>
+<dd>
+An optional reference to an array of Document objects representing the
+complete set of documents in a KnowledgeSet.  If used, the
+<a href="#item_categories"><code>categories</code></a> parameter should also be specified.
+</dd>
+<p></p>
+<dt><strong><a name="item_features_kept">features_kept</a></strong><br />
+</dt>
+<dd>
+A number indicating how many features (words) should be considered
+when training the Learner or categorizing new documents.  May be
+specified as a positive integer (e.g. 2000) indicating the absolute
+number of features to be kept, or as a decimal between 0 and 1
+(e.g. 0.2) indicating the fraction of the total number of features to
+be kept, or as 0 to indicate that no feature selection should be done
+and that the entire set of features should be used.  The default is
+0.2.
+</dd>
+<p></p>
+<dt><strong><a name="item_feature_selection">feature_selection</a></strong><br />
+</dt>
+<dd>
+A string indicating the type of feature selection that should be
+performed.  Currently the only option is also the default option:
+<a href="#item_document_frequency"><code>document_frequency</code></a>.
+</dd>
+<p></p>
+<dt><strong><a name="item_tfidf_weighting">tfidf_weighting</a></strong><br />
+</dt>
+<dd>
+Specifies how document word counts should be converted to vector
+values.  Uses the three-character specification strings from Salton &amp;
+Buckley's paper ``Term-weighting approaches in automatic text
+retrieval''.  The three characters indicate the three factors that will
+be multiplied for each feature to find the final vector value for that
+feature.  The default weighting is <code>xxx</code>.
+</dd>
+<dd>
+<p>The first character specifies the ``term frequency'' component, which
+can take the following values:</p>
+</dd>
+<dl>
+<dt><strong><a name="item_b">b</a></strong><br />
+</dt>
+<dd>
+Binary weighting - 1 for terms present in a document, 0 for terms absent.
+</dd>
+<p></p>
+<dt><strong><a name="item_t">t</a></strong><br />
+</dt>
+<dd>
+Raw term frequency - equal to the number of times a feature occurs in
+the document.
+</dd>
+<p></p>
+<dt><strong><a name="item_x">x</a></strong><br />
+</dt>
+<dd>
+A synonym for 't'.
+</dd>
+<p></p>
+<dt><strong><a name="item_n">n</a></strong><br />
+</dt>
+<dd>
+Normalized term frequency - 0.5 + 0.5 * t/max(t).  This is the same as
+the 't' specification, but with term frequency normalized to lie
+between 0.5 and 1.
+</dd>
+<p></p></dl>
+<p>The second character specifies the ``collection frequency'' component, which
+can take the following values:</p>
+<dl>
+<dt><strong><a name="item_f">f</a></strong><br />
+</dt>
+<dd>
+Inverse document frequency - multiply term <a href="#item_t"><code>t</code></a>'s value by <code>log(N/n)</code>,
+where <code>N</code> is the total number of documents in the collection, and
+<a href="#item_n"><code>n</code></a> is the number of documents in which term <a href="#item_t"><code>t</code></a> is found.
+</dd>
+<p></p>
+<dt><strong><a name="item_p">p</a></strong><br />
+</dt>
+<dd>
+Probabilistic inverse document frequency - multiply term <a href="#item_t"><code>t</code></a>'s value
+by <code>log((N-n)/n)</code> (same variable meanings as above).
+</dd>
+<p></p>
+<dt><strong>x</strong><br />
+</dt>
+<dd>
+No change - multiply by 1.
+</dd>
+<p></p></dl>
+<p>The third character specifies the ``normalization'' component, which
+can take the following values:</p>
+<dl>
+<dt><strong><a name="item_c">c</a></strong><br />
+</dt>
+<dd>
+Apply cosine normalization - multiply by 1/length(document_vector).
+</dd>
+<p></p>
+<dt><strong>x</strong><br />
+</dt>
+<dd>
+No change - multiply by 1.
+</dd>
+<p></p></dl>
+<p>The three components may alternatively be specified by the
+<code>term_weighting</code>, <code>collection_weighting</code>, and <code>normalize_weighting</code>
+parameters respectively.</p>
+<dt><strong><a name="item_verbose">verbose</a></strong><br />
+</dt>
+<dd>
+If set to a true value, some status/debugging information will be
+output on <code>STDOUT</code>.
+</dd>
+<p></p></dl>
+<dt><strong><code>categories()</code></strong><br />
+</dt>
+<dd>
+In a list context returns a list of all Category objects in this
+KnowledgeSet.  In a scalar context returns the number of such objects.
+</dd>
+<p></p>
+<dt><strong><code>documents()</code></strong><br />
+</dt>
+<dd>
+In a list context returns a list of all Document objects in this
+KnowledgeSet.  In a scalar context returns the number of such objects.
+</dd>
+<p></p>
+<dt><strong><a name="item_document"><code>document()</code></a></strong><br />
+</dt>
+<dd>
+Given a document name, returns the Document object with that name, or
+<code>undef</code> if no such Document object exists in this KnowledgeSet.
+</dd>
+<p></p>
+<dt><strong><a name="item_features"><code>features()</code></a></strong><br />
+</dt>
+<dd>
+Returns a FeatureSet object which represents the features of all the
+documents in this KnowledgeSet.
+</dd>
+<p></p>
+<dt><strong><code>verbose()</code></strong><br />
+</dt>
+<dd>
+Returns the <a href="#item_verbose"><code>verbose</code></a> parameter of this KnowledgeSet, or sets it with
+an optional argument.
+</dd>
+<p></p>
+<dt><strong><a name="item_scan_stats"><code>scan_stats()</code></a></strong><br />
+</dt>
+<dd>
+Scans all the documents of a Collection and returns a hash reference
+containing several statistics about the Collection.  (XXX need to describe stats)
+</dd>
+<p></p>
+<dt><strong><a name="item_scan_features"><code>scan_features()</code></a></strong><br />
+</dt>
+<dd>
+This method scans through a Collection object and determines the
+``best'' features (words) to use when loading the documents and training
+the Learner.  This process is known as ``feature selection'', and it's a
+very important part of categorization.
+</dd>
+<dd>
+<p>The Collection object should be specified as a <code>collection</code> parameter,
+or by giving the arguments to pass to the Collection's <a href="#item_new"><code>new()</code></a> method.</p>
+</dd>
+<dd>
+<p>The process of feature selection is governed by the
+<a href="#item_feature_selection"><code>feature_selection</code></a> and <a href="#item_features_kept"><code>features_kept</code></a> parameters given to the
+KnowledgeSet's <a href="#item_new"><code>new()</code></a> method.</p>
+</dd>
+<dd>
+<p>This method returns the features as a FeatureVector whose values are
+the ``quality'' of each feature, by whatever measure the
+<a href="#item_feature_selection"><code>feature_selection</code></a> parameter specifies.  Normally you won't need to
+use the return value, because this FeatureVector will become the
+<code>use_features</code> parameter of any Document objects created by this
+KnowledgeSet.</p>
+</dd>
+<p></p>
+<dt><strong><a name="item_save_features"><code>save_features()</code></a></strong><br />
+</dt>
+<dd>
+Given the name of a file, this method writes the features (as
+determined by the <a href="#item_scan_features"><code>scan_features</code></a> method) to the file.
+</dd>
+<p></p>
+<dt><strong><a name="item_restore_features"><code>restore_features()</code></a></strong><br />
+</dt>
+<dd>
+Given the name of a file written by <a href="#item_save_features"><code>save_features</code></a>, loads the
+features from that file and passes them as the <code>use_features</code>
+parameter for any Document objects created in the future by this
+KnowledgeSet.
+</dd>
+<p></p>
+<dt><strong><a name="item_read"><code>read()</code></a></strong><br />
+</dt>
+<dd>
+Iterates through a Collection of documents and adds them to the
+KnowledgeSet.  The Collection can be specified using a <code>collection</code>
+parameter - otherwise, specify the arguments to pass to the <a href="#item_new"><code>new()</code></a>
+method of the Collection class.
+</dd>
+<p></p>
+<dt><strong><code>load()</code></strong><br />
+</dt>
+<dd>
+This method can do feature selection and load a Collection in one step
+(though it currently uses two steps internally).
+</dd>
+<p></p>
+<dt><strong><a name="item_add_document"><code>add_document()</code></a></strong><br />
+</dt>
+<dd>
+Given a Document object as an argument, this method will add it and
+any categories it belongs to to the KnowledgeSet.
+</dd>
+<p></p>
+<dt><strong><a name="item_make_document"><code>make_document()</code></a></strong><br />
+</dt>
+<dd>
+This method will create a Document object with the given data and then
+call <a href="#item_add_document"><code>add_document()</code></a> to add it to the KnowledgeSet.  A <a href="#item_categories"><code>categories</code></a>
+parameter should specify an array reference containing a list of
+categories <em>by name</em>.  These are the categories that the document
+belongs to.  Any other parameters will be passed to the Document
+class's <a href="#item_new"><code>new()</code></a> method.
+</dd>
+<p></p>
+<dt><strong><a name="item_finish"><code>finish()</code></a></strong><br />
+</dt>
+<dd>
+This method will be called prior to training the Learner.  Its purpose
+is to perform any operations (such as feature vector weighting) that
+may require examination of the entire KnowledgeSet.
+</dd>
+<p></p>
+<dt><strong><a name="item_weigh_features"><code>weigh_features()</code></a></strong><br />
+</dt>
+<dd>
+This method will be called during <a href="#item_finish"><code>finish()</code></a> to adjust the weights of
+the features according to the <a href="#item_tfidf_weighting"><code>tfidf_weighting</code></a> parameter.
+</dd>
+<p></p>
+<dt><strong><a name="item_document_frequency"><code>document_frequency()</code></a></strong><br />
+</dt>
+<dd>
+Given a single feature (word) as an argument, this method will return
+the number of documents in the KnowledgeSet that contain that feature.
+</dd>
+<p></p>
+<dt><strong><a name="item_partition"><code>partition()</code></a></strong><br />
+</dt>
+<dd>
+Divides the KnowledgeSet into several subsets.  This may be useful for
+performing cross-validation.  The relative sizes of the subsets should
+be passed as arguments.  For example, to split the KnowledgeSet into
+four KnowledgeSets of equal size, pass the arguments .25, .25, .25
+(the final size is 1 minus the sum of the other sizes).  The
+partitions will be returned as a list.
+</dd>
+<p></p></dl>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Ken Williams, <a href="mailto:ken@mathforum.org">ken@mathforum.org</a>
+
+</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="copyright">COPYRIGHT</a></h1>
+<p>Copyright 2000-2003 Ken Williams.  All rights reserved.
+
+</p>
+<p>This library is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
+</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="see_also">SEE ALSO</a></h1>
+<p>AI::Categorizer(3)
+
+</p>
+<p><a href="#__index__"><small>Back to Top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;AI::Categorizer::KnowledgeSet - Encapsulates set of documents</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

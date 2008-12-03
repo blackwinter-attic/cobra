@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>cobra - classification of bibliographic records, automatic</title>
+<link rev="made" href="mailto:feedback@suse.de" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;cobra - classification of bibliographic records, automatic</span></strong></big>
+</td></tr>
+</table>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#usage">USAGE</a></li>
+	<li><a href="#required_arguments">REQUIRED ARGUMENTS</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<ul>
+
+		<li><a href="#generic_options">Generic options</a></li>
+		<li><a href="#import_options">Import options</a></li>
+		<li><a href="#training_options">Training options</a></li>
+		<li><a href="#export_options">Export options</a></li>
+	</ul>
+
+	<li><a href="#description__still_missing__">DESCRIPTION [STILL MISSING!]</a></li>
+	<li><a href="#subroutines">SUBROUTINES</a></li>
+	<li><a href="#examples__still_missing__">EXAMPLES [STILL MISSING!]</a></li>
+	<li><a href="#diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></li>
+	<li><a href="#configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></li>
+	<li><a href="#dependencies__still_missing__">DEPENDENCIES [STILL MISSING!]</a></li>
+	<li><a href="#bugs_and_limitations">BUGS AND LIMITATIONS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#license_and_copyright">LICENSE AND COPYRIGHT</a></li>
+	<li><a href="#see_also_references">SEE ALSO/REFERENCES</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>cobra.pl - classification of bibliographic records, automatic</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>This documentation refers to cobra.pl version 0.0.1</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="usage">USAGE</a></h1>
+<pre>
+    # Brief working invocation examples here showing the most common usages:</pre>
+<pre>
+    # This section will be as far as many users ever read, so we
+    # try to make it as educational and exemplary as possible ;-)</pre>
+<pre>
+    # Create new collection 'testcol':
+    cobra.pl create testcol
+    cobra.pl 1      testcol  # Numbers are recognized as well
+                             # (Extra whitespace just for
+                             # improved readability)</pre>
+<pre>
+    # Copy data to import directory...
+    &lt;whatever your copy command is&gt;</pre>
+<pre>
+    # ...and import collection data:
+    cobra.pl import testcol
+    cobra.pl 2      testcol  # ditto</pre>
+<pre>
+    # Alternatively, specify data to import:
+    # (By default, data are imported for training/testing; if
+    # you want to categorize your data specify a ratio of '-1')
+    cobra.pl import testcol -d data.txt</pre>
+<pre>
+    # Train DecisionTree learner:
+    cobra.pl train testcol -l DecisionTree
+    cobra.pl 3     testcol -l DecisionTree  # ditto</pre>
+<pre>
+    # Test learner on reserved data:
+    cobra.pl test testcol
+    cobra.pl 4    testcol  # ditto</pre>
+<pre>
+    # Export collection as Midos2000 database [NOT IMPLEMENTED YET!]:
+    cobra.pl export testcol -f Midos
+    cobra.pl 6      testcol -f Midos  # ditto</pre>
+<pre>
+    # Or in one go ;-) (Phase 5/categorize will be skipped; see above)
+    cobra.pl create-export testcol -l DecisionTree -f Midos -d data.txt
+    cobra.pl 1-6           testcol -l DecisionTree -f Midos -d data.txt</pre>
+<p>See section <a href="#examples">EXAMPLES</a> for more detailed demonstrations. [STILL MISSING!]</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="required_arguments">REQUIRED ARGUMENTS</a></h1>
+<p>A complete list of every argument that must appear on the command line
+when the application is invoked, explaining what each of them does, any
+restrictions on where each one may appear (i.e., flags that must appear
+before or after filenames), and how the various arguments and options
+may interact (i.e., mutual exclusions, required combinations, etc.).</p>
+<dl>
+<dt><strong><a name="item__3caction_3e">&lt;action&gt;</a></strong><br />
+</dt>
+<dd>
+The action to perform (May be number or name):
+</dd>
+<dd>
+<p>1. <a href="../site/lib/COBRA.html#item_create">create</a></p>
+</dd>
+<dd>
+<p>2. <a href="../site/lib/COBRA.html#item_import">import</a></p>
+</dd>
+<dd>
+<p>3. <a href="../site/lib/COBRA.html#item_train">train</a></p>
+</dd>
+<dd>
+<p>4. <a href="../site/lib/COBRA.html#item_test">test</a></p>
+</dd>
+<dd>
+<p>5. <a href="../site/lib/COBRA.html#item_categorize">categorize</a></p>
+</dd>
+<dd>
+<p>6. <a href="../site/lib/COBRA.html#item_export">export</a> [NOT IMPLEMENTED YET!]</p>
+</dd>
+<dd>
+<p>7. <a href="../site/lib/COBRA.html#item_purge">purge</a></p>
+</dd>
+<dd>
+<p>8. <a href="../site/lib/COBRA.html#item_remove">remove</a></p>
+</dd>
+<dd>
+<p>With a properly set up configuration file or command-line you may even specify
+ranges of actions. Examples: <code>'import-export'</code>, or equivalently
+<code>'2-6'</code> (phase 5/categorize or phases 3/train and 4/test will be skipped;
+see below); <code>'purge,import'</code>, or equivalently <code>'7,2'</code>;
+<code>'create-train,export'</code>, or equivalently <code>'1-3,6'</code> -- note that
+order matters!). Whether training (and testing) or categorizing will be
+inferred from the <code>-ratio</code> option.</p>
+</dd>
+<p></p>
+<dt><strong><a name="item__3ccollection_3e">&lt;collection&gt;</a></strong><br />
+</dt>
+<dd>
+The name of the collection to operate on.
+</dd>
+<p></p></dl>
+<p><strong>MIND THE ORDER: &lt;action&gt; <em>before</em> &lt;collection&gt;!</strong></p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<p>A complete list of every available option with which the application
+can be invoked, explaining what each does, and listing any restrictions,
+or interactions.</p>
+<p>
+</p>
+<h2><a name="generic_options">Generic options</a></h2>
+<dl>
+<dt><strong><a name="item__2dv_5berbosity_5d__5b_3d_5d__3cverbosity_3e">-v[erbosity] [=] &lt;verbosity&gt;</a></strong><br />
+</dt>
+<dd>
+Controls the verbosity of output (0=none, 2=lots). NOTE: At the moment the
+level of verbosity is not accounted for, since there is no information to
+display (however, there will be some information from
+<a href="../site/AI/Categorizer.html">AI::Categorizer</a> according to the specified verbosity level);
+this will change in the future. [default: <code>'1'</code> -- spits out some
+explanatory information]
+</dd>
+<p></p>
+<dt><strong><a name="item__2dconf_5big_5b_file_5d_5d__5b_3d_5d__3cconfig_fil">-conf[ig[_file]] [=] &lt;config_file&gt;</a></strong><br />
+</dt>
+<dd>
+Global configuration file to use. [default: <code>'etc/cobra.conf'</code>]
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="import_options">Import options</a></h2>
+<dl>
+<dt><strong><a name="item__2dt_5bype_5d__5b_3d_5d__3ccollection_type_3e">-t[ype] [=] &lt;collection_type&gt;</a></strong><br />
+</dt>
+<dd>
+Type of collection to import. See <a href="../site/lib/COBRA/Collection.html">COBRA::Collection</a> for
+available types (NOTE: specify, e.g., <code>'Simple::SOLIS'</code> as 
+<code>'Simple/SOLIS'</code>). [default: <code>'Simple/SOLIS'</code>]
+</dd>
+<p></p>
+<dt><strong><a name="item__2du_5bse_5b_fields_5d_5d__5b_3d_5d__3cfields_3e">-u[se[_fields]] [=] &lt;fields&gt;</a></strong><br />
+</dt>
+<dd>
+Comma-separated list of fields to use from records. Type <code>'help'</code> for a
+list of available fields. Use <code>'#ALL#'</code> as the <em>only</em> value to consider
+all available fields. [default: <code>'TI,CT,AB,ME'</code>]
+</dd>
+<p></p>
+<dt><strong><a name="item__2di_5bndexer_5d__5b_3d_5d__3cindexer_3e">-i[ndexer] [=] &lt;indexer&gt;</a></strong><br />
+</dt>
+<dd>
+This option tells us to perform automatic indexing on the records, using the
+specified type of indexer. See <a href="../site/lib/COBRA/WrapIndexer.html">COBRA::WrapIndexer</a> for
+available types. Also set the <code>-effect</code> option to decide whether the
+indexing results shall be added to the records or replace them. [default:
+<code>''</code> -- i.e., don't index]
+</dd>
+<p></p>
+<dt><strong><a name="item__2d_5bindexer__5db_5base_5d__5b_3d_5d__3cbase_dire">-[indexer_]b[ase] [=] &lt;base_directory&gt;</a></strong><br />
+</dt>
+<dd>
+Path to the indexer's base directory. [default: <code>''</code>]
+</dd>
+<p></p>
+<dt><strong><a name="item__2d_5bindexer__5da_5brgs_5d__5b_3d_5d__3cargument_">-[indexer_]a[rgs] [=] &lt;argument&gt;...</a></strong><br />
+</dt>
+<dd>
+Additional arguments for the indexer. NOTE: If you specify this option on the
+command-line, it must be the last one. [default: <code>''</code>]
+</dd>
+<p></p>
+<dt><strong><a name="item__2de_5bffect_5d__5b_3d_5d__3cadd_or_replace_3e">-e[ffect] [=] &lt;add_or_replace&gt;</a></strong><br />
+</dt>
+<dd>
+Specifies whether the indexing results shall be added to the records or replace
+them. [default: <code>'add'</code>]
+</dd>
+<p></p>
+<dt><strong><a name="item__2d_5bre_5dp_5beat_5d">-[re]p[eat]</a></strong><br />
+</dt>
+<dd>
+If specified, indexing results will be repeated according to their weight
+(assuming integer values, representing the term frequency).
+</dd>
+<p></p>
+<dt><strong><a name="item__2dr_5batio_5d__5b_3d_5d__3cratio_3e">-r[atio] [=] &lt;ratio&gt;</a></strong><br />
+</dt>
+<dd>
+Percentage of documents to use for testing (vs. training). Also implies the
+intended purpose, i.e. whether training (and testing) or categorizing or doing a
+class integrity check (testing the training data). Use the following keywords or
+values:
+</dd>
+<dd>
+<p><code>'train'</code>: Training only, equivalent to <code>'0'</code>.</p>
+</dd>
+<dd>
+<p><code>'test'</code>: Testing only, equivalent to <code>'100'</code>.</p>
+</dd>
+<dd>
+<p><code>'categorize'</code>: Categorizing, equivalent to <code>'-1'</code>.</p>
+</dd>
+<dd>
+<p><code>'check_integrity'</code>: Class integrity check, equivalent to <code>'-2'</code>. All documents
+will be used for both training and testing.</p>
+</dd>
+<dd>
+<p>[default: <code>'10'</code> -- thus reserves 10% of the documents for testing and uses
+the rest for training]</p>
+</dd>
+<p></p>
+<dt><strong><a name="item__2dk_5beepold_5d">-k[eepold]</a></strong><br />
+</dt>
+<dd>
+Keeps already imported data, i.e. adds specified data onto existing ones. Use
+with care.
+</dd>
+<p></p>
+<dt><strong><a name="item__2dd_5bata_5b_file_5bs_5d_5d_5d__5b_3d_5d__3cdata_">-d[ata[_file[s]]] [=] &lt;data_file&gt;...</a></strong><br />
+</dt>
+<dd>
+Data files to import; alternatively, copy your to-be-imported data into the
+<em>collect/&lt;colname&gt;/import/</em> directory, which will be done anyway. All
+files from the aforementioned directory will be used if this option is omitted.
+NOTE: If you specify this option on the command-line, it must be the last one.
+[default: <code>''</code> -- thus uses files from the import directory]
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="training_options">Training options</a></h2>
+<dl>
+<dt><strong><a name="item__2dl_5bearner_5d__5b_3d_5d__3clearner_3e">-l[earner] [=] &lt;learner&gt;</a></strong><br />
+</dt>
+<dd>
+Machine learning algorithm to use. Type <code>'help'</code> for a list of available
+algorithms or see <a href="../site/lib/COBRA.html#learners">Learners in the COBRA manpage</a> for more information, including
+learner-specific parameters and order of magnitude for their processing time.
+[default: <code>'NaiveBayes'</code>]
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="export_options">Export options</a></h2>
+<dl>
+<dt><strong><a name="item__2df_5bormat_5d__5b_3d_5d__3cexport_format_3e">-f[ormat] [=] &lt;export_format&gt;</a></strong><br />
+</dt>
+<dd>
+Format to export collection to. Type <code>'help'</code> for a list of available
+formats or see <a href="../site/lib/COBRA/Export.html">COBRA::Export</a> for more information. [default:
+<code>'Midos'</code>]
+</dd>
+<p></p></dl>
+<p>NOTE: Unfortunately, you can't specify both <code>-indexer_args</code> and
+<code>-data_files</code> on the command-line at the same time (due to restrictions in
+Getopt::Euclid) -- hopefully, this will be fixed in the future, either by
+Getopt::Euclid or by this module. For now, either use the configuration file or
+the alternative import method through the import directory. Sorry for any
+inconvenience ;-)</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="description__still_missing__">DESCRIPTION [STILL MISSING!]</a></h1>
+<p>A full description of the application and its features.
+May include numerous subsections (i.e., =head2, =head3, etc.)</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="subroutines">SUBROUTINES</a></h1>
+<p>The following subroutines are simply used to segment the code.</p>
+<dl>
+<dt><strong><a name="item_clean_argv">clean_argv</a></strong><br />
+</dt>
+<dd>
+Cleans up the global <code>%ARGV</code> hash to enforce consistency in use
+throughout the code -- i.e., deletes any shortnames introduced by
+<a href="../site/Getopt/Euclid.html">Getopt::Euclid</a>, uses only the names specified in the
+<code>%is_valid</code> hash instead (apart from certain exceptions). Updates
+the global <code>%ARGV</code> hash.
+</dd>
+<p></p>
+<dt><strong><a name="item_print_help">print_help</a></strong><br />
+</dt>
+<dd>
+Prints a help message for certain arguments if requested (usually by specifying
+<code>'help'</code> as argument value).
+</dd>
+<p></p>
+<dt><strong><a name="item_parse_action">parse_action</a></strong><br />
+</dt>
+<dd>
+Parses any range specifications in the action string. Returns boolean values for
+whether we are creating a new collection and/or removing an existing one.
+Updates the global <code>%ARGV</code> hash.
+</dd>
+<p></p>
+<dt><strong><a name="item_parse_conf">parse_conf</a></strong><br />
+</dt>
+<dd>
+Reads and parses the given configuration files. Takes a list of configuration
+files as argument. Returns a hash containing the configuration settings.
+</dd>
+<p></p>
+<dt><strong><a name="item_merge_conf">merge_conf</a></strong><br />
+</dt>
+<dd>
+Merges the config file settings with the command-line arguments, the latter
+taking precedence over the former. Takes the config hash as argument. Updates
+the global <code>%ARGV</code> hash.
+</dd>
+<p></p>
+<dt><strong><a name="item_split_argv">split_argv</a></strong><br />
+</dt>
+<dd>
+Splits the given arguments at specified strings to array references. Takes a
+hash of <code>argument =&gt; string</code> pairs as argument. Updates the global
+<code>%ARGV</code> hash.
+</dd>
+<p></p>
+<dt><strong><a name="item_drop_action">drop_action</a></strong><br />
+</dt>
+<dd>
+Drops certain actions, according to the specified ratio. Updates the global
+<code>%ARGV</code> hash.
+</dd>
+<p></p></dl>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="examples__still_missing__">EXAMPLES [STILL MISSING!]</a></h1>
+<p>Many people learn better by example than by explanation, and most learn better
+by a combination of the two. Providing a <em>/demo</em> directory stocked with well-
+commented examples is an excellent idea, but users might not have access to the
+original distribution, and demos are unlikely to have been installed for them.
+Adding a few illustrative examples in the documentation itself can greatly
+increase the ``learnability'' of your code.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></h1>
+<p>A list of every error and warning message that the application can generate
+(even the ones that will ``never happen''), with a full explanation of each
+problem, one or more likely causes, and any suggested remedies. If the
+application generates exit status codes (e.g., under UNIX), then list the exit
+status associated with each error.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></h1>
+<p>A full explanation of any configuration systems used by the application,
+including the names and locations of any configuration files, and the
+meaning of any environment variables and properties that can be set. These
+descriptions must also include details of any configuration language used.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="dependencies__still_missing__">DEPENDENCIES [STILL MISSING!]</a></h1>
+<p>A list of all the other programs or modules that this application relies upon,
+including any restrictions on versions, and an indication of whether these
+required programs and modules are part of the standard Perl distribution,
+part of the application's distribution, or must be installed separately.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="bugs_and_limitations">BUGS AND LIMITATIONS</a></h1>
+<p>A list of known problems with the application, together with some indications
+of whether they are likely to be fixed in an upcoming release.</p>
+<p>Also a list of restrictions on the features the application does provide:
+data types that cannot be handled, performance issues and the circumstances
+in which they may arise, practical limitations on the size of data sets,
+special cases that are not (yet) handled, etc.</p>
+<p>There are no known bugs in this application. Please report problems to Jens
+Wille <code>&lt;jens.wille@gmail.com&gt;</code>. Patches are welcome.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="license_and_copyright">LICENSE AND COPYRIGHT</a></h1>
+<p>Copyright (C) 2006 Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="see_also_references">SEE ALSO/REFERENCES</a></h1>
+<p>Often there will be other modules and applications that are possible
+alternatives to using your software. Or other documentation that would be of
+use to the users of your software. Or a journal article or book that explains
+the ideas on which the software is based. Listing those in a ``See Also'' section
+allows people to understand your software better and to find the best solution
+for their problems themselves, without asking you directly.</p>
+<p><a href="../site/lib/COBRA.html">COBRA</a>, <a href="../site/lib/COBRA/Collection.html">COBRA::Collection</a>,
+<a href="../site/lib/COBRA/Util.html">COBRA::Util</a></p>
+<p><a href="#__index__"><small>Back to Top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;cobra - classification of bibliographic records, automatic</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

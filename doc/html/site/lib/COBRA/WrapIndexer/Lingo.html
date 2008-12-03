@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>COBRA::WrapIndexer::Lingo - Wrapper for the automatic indexing program Lingo</title>
+<link rev="made" href="mailto:feedback@suse.de" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;COBRA::WrapIndexer::Lingo - Wrapper for the automatic indexing program Lingo</span></strong></big>
+</td></tr>
+</table>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description__still_missing__">DESCRIPTION [STILL MISSING!]</a></li>
+	<li><a href="#methods">METHODS</a></li>
+	<ul>
+
+		<li><a href="#constructor">Constructor</a></li>
+		<li><a href="#public_interface_methods">Public interface methods</a></li>
+	</ul>
+
+	<li><a href="#examples__still_missing__">EXAMPLES [STILL MISSING!]</a></li>
+	<li><a href="#diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></li>
+	<li><a href="#configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></li>
+	<li><a href="#dependencies__still_missing__">DEPENDENCIES [STILL MISSING!]</a></li>
+	<li><a href="#bugs_and_limitations">BUGS AND LIMITATIONS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#license_and_copyright">LICENSE AND COPYRIGHT</a></li>
+	<li><a href="#see_also_references">SEE ALSO/REFERENCES</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>COBRA::WrapIndexer::Lingo - Wrapper for the automatic indexing program Lingo</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>This documentation refers to COBRA::WrapIndexer::Lingo version 0.0.1</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+    use COBRA::WrapIndexer::Lingo;
+    # Brief but working code examples here showing the most common usages:</pre>
+<pre>
+    # This section will be as far as many users ever read, so we
+    # try to make it as educational and exemplary as possible ;-)</pre>
+<pre>
+    # Create lingo object:
+    my $lingo = COBRA::WrapIndexer::Lingo-&gt;new({ path =&gt; $path_to_lingo,
+                                                 args =&gt; \@lingo_args });</pre>
+<pre>
+    # Run indexing:
+    $lingo-&gt;run( @files );</pre>
+<pre>
+    # Get results (hash of arrays of hashes):
+    my $results = $lingo-&gt;get_results( @files );</pre>
+<pre>
+    # Or, in &quot;plain&quot; form (hash of arrays of terms):
+    my $results = $lingo-&gt;get_plain_results( @files, $repeat );</pre>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="description__still_missing__">DESCRIPTION [STILL MISSING!]</a></h1>
+<p>A full description of the module and its features.
+May include numerous subsections (i.e., =head2, =head3, etc.)</p>
+<p>NOTE: The Lingo configuration has to be in line with the <a href="#item_get_results">get_results</a>
+function! See below for details. Also the Lingo program has to meet certain
+conditions that weren't present as of version 1.6.1 -- see the following diff:</p>
+<pre>
+    *** lib/attendee/textwriter.rb       2006-06-20 13:42:11.000000000 +0200
+    --- lib/attendee/textwriter.rb~      2006-03-25 03:06:37.000000000 +0100
+    ***************
+    *** 95,96 ****
+    !                       #@filename = par.gsub(/[^\.]+$/, @ext)
+    !                       @filename = par.sub(/(?:\.[^.]+)?$/, '.'+@ext)
+    --- 95 ----
+    !                       @filename = par.gsub(/[^\.]+$/, @ext)
+    ===============================================================================
+    *** lib/config.rb       2006-06-20 13:42:11.000000000 +0200
+    --- lib/config.rb~      2006-03-25 03:06:37.000000000 +0100
+    ***************
+    *** 34 ****
+    !               @options = load_yaml_file(prog.sub(/\.[^\.]+$/, ''), '.opt')
+    --- 34 ----
+    !               @options = load_yaml_file(prog, '.opt')
+    ***************
+    *** 90,94 ****
+    -               #if file_name =~ /\./
+    -               #       yaml_file = file_name.sub(/\.([^\.]+)$/, file_ext)
+    -               #else
+    -               #       yaml_file = file_name + file_ext
+    -               #end
+    --- 89 ----
+    ***************
+    *** 96 ****
+    !                       yaml_file = file_name
+    --- 91 ----
+    !                       yaml_file = file_name.sub(/\.([^\.]+)$/, file_ext)
+    ***************
+    *** 100 ****
+    --- 96 ----
+    +</pre>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="methods">METHODS</a></h1>
+<p>A separate section listing the public components of the module's interface.
+These normally consist of methods that may be called on objects belonging to
+the classes that the module provides.</p>
+<p>In an object-oriented module, this section should begin with a sentence of the
+form ``An object of this class represents...'', to give the reader a high-level
+context to help them understand the methods that are subsequently described.</p>
+<p>
+</p>
+<h2><a name="constructor">Constructor</a></h2>
+<dl>
+<dt><strong><a name="item_new">new</a></strong><br />
+</dt>
+<dd>
+TO-BE-DOCUMENTED
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="public_interface_methods">Public interface methods</a></h2>
+<dl>
+<dt><strong><a name="item_get_results">get_results</a></strong><br />
+</dt>
+<dd>
+Parses the resulting <code>.vec</code> files, thus giving access to the indexing
+results. Takes a list of indexed files as argument, inferring from these the
+particular result files. Returns a hash of <code>file name =&gt; array of hashes</code>
+pairs, with the latter hashes consisting of <code>'term' =&gt; index term</code> and
+<code>'weight' =&gt; assigned weight</code> pairs. In order for this to work properly
+the Lingo configuration must adhere to the following constraints: 1) The
+<em>vector_filter</em> must sort by absolute term frequency (<code>sort: 'term_abs'</code>),
+yielding a <code>frequency term</code> format of the result file; 2) the <em>textwriter</em>
+must assign the extension <code>.vec</code> to the result files (<code>ext: vec</code>) and
+3) must separate entries in the result file by newlines (<code>sep: &quot;\n&quot;</code>).
+Also see the sample Lingo configuration file <em>etc/lingo.conf</em>.
+</dd>
+<p></p></dl>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="examples__still_missing__">EXAMPLES [STILL MISSING!]</a></h1>
+<p>Many people learn better by example than by explanation, and most learn better
+by a combination of the two. Providing a <em>/demo</em> directory stocked with well-
+commented examples is an excellent idea, but users might not have access to the
+original distribution, and demos are unlikely to have been installed for them.
+Adding a few illustrative examples in the documentation itself can greatly
+increase the ``learnability'' of your code.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="diagnostics__still_missing__">DIAGNOSTICS [STILL MISSING!]</a></h1>
+<p>A list of every error and warning message that the module can generate
+(even the ones that will ``never happen''), with a full explanation of each
+problem, one or more likely causes, and any suggested remedies.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="configuration_and_environment__still_missing__">CONFIGURATION AND ENVIRONMENT [STILL MISSING!]</a></h1>
+<p>A full explanation of any configuration <code>system(s)</code> used by the module,
+including the names and locations of any configuration files, and the
+meaning of any environment variables and properties that can be set. These
+descriptions must also include details of any configuration language used.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="dependencies__still_missing__">DEPENDENCIES [STILL MISSING!]</a></h1>
+<p>A list of all the other modules that this module relies upon, including any
+restrictions on versions, and an indication of whether these required modules
+are part of the standard Perl distribution, part of the module's distribution,
+or must be installed separately.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="bugs_and_limitations">BUGS AND LIMITATIONS</a></h1>
+<p>A list of known problems with the module, together with some indications of
+whether they are likely to be fixed in an upcoming release.</p>
+<p>Also a list of restrictions on the features the module does provide:
+data types that cannot be handled, performance issues and the circumstances
+in which they may arise, practical limitations on the size of data sets,
+special cases that are not (yet) handled, etc.</p>
+<p>There are no known bugs in this module. Please report problems to Jens Wille
+<code>&lt;jens.wille@gmail.com&gt;</code>. Patches are welcome.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="license_and_copyright">LICENSE AND COPYRIGHT</a></h1>
+<p>Copyright (C) 2006 Jens Wille <code>&lt;jens.wille@gmail.com&gt;</code></p>
+<p>This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</p>
+<p>
+<a href="#__index__"><small>Back to Top</small></a>
+</p>
+<hr />
+<h1><a name="see_also_references">SEE ALSO/REFERENCES</a></h1>
+<p>Often there will be other modules and applications that are possible
+alternatives to using your software. Or other documentation that would be of
+use to the users of your software. Or a journal article or book that explains
+the ideas on which the software is based. Listing those in a ``See Also'' section
+allows people to understand your software better and to find the best solution
+for their problems themselves, without asking you directly.</p>
+<p><a href="../../../../site/lib/COBRA.html">COBRA</a>, <a href="../../../../site/lib/COBRA/WrapIndexer.html">COBRA::WrapIndexer</a></p>
+<p><a href="#__index__"><small>Back to Top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;COBRA::WrapIndexer::Lingo - Wrapper for the automatic indexing program Lingo</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>

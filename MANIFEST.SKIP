@@ -1,0 +1,14 @@
+^_build
+^Build$
+^blib
+~$
+\.bak$
+\.tmp$
+^MANIFEST\.SKIP$
+CVS
+^collect
+^dump$
+^re$
+^re\.t$
+_test
+
